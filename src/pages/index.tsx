@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from '@/app/layout';
+import Layout from "@/app/Layout";
 import Link from "next/link";
 
 const Home: React.FC = () => {
@@ -8,8 +8,8 @@ const Home: React.FC = () => {
             <Layout>
                 <h1>My Portfolio</h1>
                 <nav>
-                <Link href="/about">About</Link>
-                <Link href="/contact">Contact</Link>
+                    <Link href="/about">About</Link>
+                    <Link href="/contact">Contact</Link>
                 </nav>
             </Layout>
         </div>
