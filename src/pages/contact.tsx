@@ -1,13 +1,15 @@
 import React from 'react';
+import Layout from '@/app/layout';
 import Link from 'next/link';
 
 const Contact: React.FC = () => {
     return (
         <div>
-            <Header />
-            <h1>Contact Me</h1>
-            <p>作成中</p>
-            <Link href="/">Go back to Home</Link>
+            <Layout>
+                <h1>Contact Me</h1>
+                <p>作成中</p>
+                <Link href="/">Go back to Home</Link>
+            </Layout>
         </div>
     );
 };

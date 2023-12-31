@@ -1,17 +1,17 @@
-import 'tailwindcss/tailwind.css';
 import React from "react";
+import Layout from '@/app/layout';
 import Link from "next/link";
-import Header from "@/components/organisms/Header";
 
 const Home: React.FC = () => {
     return (
         <div>
-            <Header />
-            <h1>My Portfolio</h1>
-            <nav>
+            <Layout>
+                <h1>My Portfolio</h1>
+                <nav>
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contact</Link>
-            </nav>
+                </nav>
+            </Layout>
         </div>
     );
 };
