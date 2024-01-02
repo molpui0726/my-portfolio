@@ -18,7 +18,7 @@ const NavButton: React.FC<NavButtonProps> = ({ href, children }: NavButtonProps)
             href={href}
             className={`
             ${isHovered ? 'bg-gray-800 text-white' : ''}
-            px-2 py-1 rounded
+            px-2 py-1 rounded transition md:duration-700 ease-in-out
             `}
             onMouseEnter={handlerHover}
             onMouseLeave={handlerHover}

@@ -6,6 +6,7 @@
 
 - Next.js
 - tailwindcss
+- storybook
 - versel
 
 
