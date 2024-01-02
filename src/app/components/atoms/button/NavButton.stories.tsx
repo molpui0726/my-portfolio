@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import NavButton from './NavButton';
 
 const meta = {
-    title: "components/button/NavButton",
+    title: "components/atoms/button/NavButton",
     component: NavButton,
 } satisfies Meta<typeof NavButton>;
 
