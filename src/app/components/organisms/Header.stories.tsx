@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import * as NavButtonStories from "@/components/atoms/button/NavButton.stories.tsx";
+import * as NavButtonStories from "@/components/atoms/button/NavButton.stories";
 import Header from "./Header";
 
 const meta = {
