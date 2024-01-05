@@ -1,8 +1,9 @@
 import React from "react";
-import Layout from "@/app/Layout";
-import MediaObject from "@/app/components/organisms/MediaObject";
 import Image from "next/image";
 import Link from "next/link";
+import Layout from "@/app/Layout";
+import MediaObject from "@/app/components/organisms/MediaObject";
+import WorkCard from "@/app/components/molecules/card/WorkCard";
 
 const About: React.FC = () => {
     return (
@@ -14,6 +15,12 @@ const About: React.FC = () => {
                     heading="About Me"
                     text="宮崎大学の大学院に在籍している木村優哉です！
                     プログラミングを専攻する学科に所属しており、研究やETロボコン、Webアプリケーション開発のアルバイトなどを行っております！"
+                />
+
+                <WorkCard
+                    src="/images/robot_and_hogeta.jpeg"
+                    workTitle="worktitle"
+                    knowledge="knowledge"
                 />
                 <p>作成中</p>
                 <Link href="/">Go back to Home</Link>
