@@ -16,7 +16,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, knowledge }) =
                 <div className="relative group flex flex-col shadow-2xl rounded-xl overflow-hidden md:w-80 md:-ml-16">
                     <Image className="object-cover object-center w-full rounded-t-xl lg:h-60 md:h-48"
                         src={src}
-                        alt={alt}
+                        alt={alt ?? workTitle}
                         width={600}
                         height={600} />
                     <div className="bg-white transition duration-500 ease-in-out delay-150 group-hover:translate-y-[-100px]">
