@@ -1,3 +1,17 @@
+# 本リポジトリについて
+本リポジトリは、私のポートフォリオサイトとなります。（現在制作中）
+
+# 使用技術
+使用技術は以下の通りです。
+
+- Next.js
+- tailwindcss
+- storybook
+- versel
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
