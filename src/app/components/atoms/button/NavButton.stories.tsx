@@ -1,10 +1,17 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
+import { withActions } from '@storybook/addon-actions/decorator';
 import NavButton from "./NavButton";
 
 const meta = {
     title: "components/atoms/button/NavButton",
     component: NavButton,
+    parameters: {
+        actions: {
+            handles: ['mouseover', 'click .btn'],
+        },
+    },
+    decorators: [withActions],
 } satisfies Meta<typeof NavButton>;
 
 export default meta;
@@ -16,5 +23,5 @@ export const Default: Story = {
         href: '/',
         children: 'NavButton'
     },
-    render: (arg) => <NavButton {...arg}></NavButton>,
+    render: (args) => <NavButton {...args}></NavButton>,
 };
