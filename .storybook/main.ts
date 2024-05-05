@@ -34,6 +34,7 @@ const config: StorybookConfig = {
                 ],
             },
         },
+        "@chromatic-com/storybook"
     ],
     framework: {
         name: "@storybook/nextjs",
