@@ -1,10 +1,17 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
+import { withActions } from '@storybook/addon-actions/decorator';
 import WorkCard from "./WorkCard";
 
 const meta = {
     title: "components/molecules/card/WordCard",
     component: WorkCard,
+    parameters: {
+        actions: {
+            handles: ['mouseover'],
+        },
+    },
+    decorators: [withActions],
 } satisfies Meta<typeof WorkCard>;
 
 export default meta;
@@ -18,5 +25,5 @@ export const Default: Story = {
         workTitle: 'workTitle',
         knowledge: 'knowledge'
     },
-    render: (arg) => <WorkCard {...arg}></WorkCard>,
+    render: (args) => <WorkCard {...args}></WorkCard>,
 };
