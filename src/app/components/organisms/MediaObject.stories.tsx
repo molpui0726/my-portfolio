@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 import MediaObject from "./MediaObject";
 
 const meta = {
@@ -18,5 +18,4 @@ export const Default: Story = {
         heading: 'Sample Heading',
         text: 'Sample Text'
     },
-    render: (args) => <MediaObject {...args}></MediaObject>,
 };
