@@ -8,7 +8,7 @@ type MediaObjectProps = {
     text: string;
 }
 
-const MediaObject: React.FC<MediaObjectProps> = ({src, alt, heading, text}) => {
+export const MediaObject: React.FC<MediaObjectProps> = ({src, alt, heading, text}) => {
     return (
         <div className='bg-white py-6 sm:py-8 lg:py-12'>
             <div className='mx-auto'>
@@ -32,5 +32,3 @@ const MediaObject: React.FC<MediaObjectProps> = ({src, alt, heading, text}) => {
         </div>
     );
 };
-
-export default MediaObject;
