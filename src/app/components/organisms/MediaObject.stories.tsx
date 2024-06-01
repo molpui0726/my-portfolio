@@ -1,6 +1,6 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/nextjs";
-import MediaObject from "./MediaObject";
+import type { Meta, StoryObj } from "@storybook/react";
+import { MediaObject } from "./MediaObject";
 
 const meta = {
     title: "components/organisms/MediaObject",
