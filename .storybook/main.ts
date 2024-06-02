@@ -43,6 +43,8 @@ const config: StorybookConfig = {
         options: {},
     },
 
+    features: { experimentalRSC: true },
+
     staticDirs: ["../public"],
 
     docs: {},

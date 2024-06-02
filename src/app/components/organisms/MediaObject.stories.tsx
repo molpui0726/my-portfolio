@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import MediaObject from "./MediaObject";
+import { MediaObject } from "./MediaObject";
 
 const meta = {
     title: "components/organisms/MediaObject",
@@ -18,5 +18,4 @@ export const Default: Story = {
         heading: 'Sample Heading',
         text: 'Sample Text'
     },
-    render: (args) => <MediaObject {...args}></MediaObject>,
 };
