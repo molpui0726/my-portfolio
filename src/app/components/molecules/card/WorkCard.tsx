@@ -5,12 +5,11 @@ type WorkCardProps = {
     src: string;
     alt?: string;
     workTitle: string;
-    knowledge: string;
+    knowledge: string[];
 }
 
 export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, knowledge }) => {
     return (
-
         <a href="">
             <div className="flex justify-center w-full">
                 <div className="relative group flex flex-col shadow-2xl rounded-xl overflow-hidden md:w-80 md:-ml-16">
@@ -19,11 +18,12 @@ export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, knowled
                         alt={alt ?? workTitle}
                         width={600}
                         height={600} />
-                    <div className="bg-white transition duration-500 ease-in-out delay-150 group-hover:translate-y-[-100px]">
+                    <div className="bg-white w-full h-full transition duration-500 ease-in-out delay-150 group-hover:translate-y-[-100px]">
                         <div className="px-6 mt-8 mb-4">
                             <h1 className="mt-4 mb-4 text-2xl font-semibold text-neutral-600">{workTitle}</h1>
-                            <p className="text-base font-normal text-gray-500 leading-relax">{knowledge}</p>
-                            <p className="text-base font-normal text-gray-500 leading-relax">{knowledge}</p>
+                            {knowledge.map((item, index) => (
+                                <p key={index} className="text-base font-normal text-gray-500 leading-relax">{item}</p>
+                            ))}
                         </div>
                     </div>
                 </div>

@@ -23,6 +23,6 @@ export const Default: Story = {
         src: '/images/robot_and_hogeta.jpeg',
         alt: 'sample-alt',
         workTitle: 'workTitle',
-        knowledge: 'knowledge'
+        knowledge: ['knowledge1', 'knowledge2', 'knowledge3'],
     },
 };
