@@ -8,7 +8,7 @@ type WorkCardProps = {
     knowledge: string;
 }
 
-const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, knowledge }) => {
+export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, knowledge }) => {
     return (
 
         <a href="">
@@ -32,5 +32,3 @@ const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, knowledge }) =
 
     );
 };
-
-export default WorkCard;

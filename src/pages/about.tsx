@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Layout from "@/app/Layout";
 import { MediaObject } from "@/app/components/organisms/MediaObject";
-import WorkCard from "@/app/components/molecules/card/WorkCard";
+import { WorkCard } from "@/app/components/molecules/card/WorkCard";
 
 const About: React.FC = () => {
     return (

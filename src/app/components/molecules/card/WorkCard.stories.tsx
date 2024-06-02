@@ -1,7 +1,7 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { withActions } from '@storybook/addon-actions/decorator';
-import WorkCard from "./WorkCard";
+import { WorkCard } from "./WorkCard";
 
 const meta = {
     title: "components/molecules/card/WordCard",
@@ -20,10 +20,9 @@ type Story = StoryObj<typeof WorkCard>;
 
 export const Default: Story = {
     args: {
-        src: "/images/robot_and_hogeta.jpeg",
+        src: '/images/robot_and_hogeta.jpeg',
         alt: 'sample-alt',
         workTitle: 'workTitle',
         knowledge: 'knowledge'
     },
-    render: (args) => <WorkCard {...args}></WorkCard>,
 };
