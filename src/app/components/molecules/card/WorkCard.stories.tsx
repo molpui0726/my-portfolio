@@ -8,7 +8,7 @@ const meta = {
     component: WorkCard,
     parameters: {
         actions: {
-            handles: ['mouseover'],
+            handles: ["mouseover"],
         },
     },
     decorators: [withActions],
@@ -20,9 +20,9 @@ type Story = StoryObj<typeof WorkCard>;
 
 export const Default: Story = {
     args: {
-        src: '/images/robot_and_hogeta.jpeg',
-        alt: 'sample-alt',
-        workTitle: 'workTitle',
-        knowledge: ['knowledge1', 'knowledge2', 'knowledge3'],
+        src: "/images/robot_and_hogeta.jpeg",
+        alt: "sample-alt",
+        workTitle: "workTitle",
+        techs: ["tech1", "tech2", "tech3"],
     },
 };
