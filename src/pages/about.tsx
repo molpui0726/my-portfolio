@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Layout from "@/app/Layout";
 import { MediaObject } from "@/app/components/organisms/MediaObject";
-import WorkCard from "@/app/components/molecules/card/WorkCard";
+import { WorkCard } from "@/app/components/molecules/card/WorkCard";
 
 const About: React.FC = () => {
     return (
@@ -20,7 +20,7 @@ const About: React.FC = () => {
                 <WorkCard
                     src="/images/robot_and_hogeta.jpeg"
                     workTitle="worktitle"
-                    knowledge="knowledge"
+                    techs={["technology1", "technology2", "technology3"]}
                 />
                 <p>作成中</p>
                 <Link href="/">Go back to Home</Link>
