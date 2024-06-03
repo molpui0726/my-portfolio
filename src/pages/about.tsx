@@ -20,7 +20,7 @@ const About: React.FC = () => {
                 <WorkCard
                     src="/images/robot_and_hogeta.jpeg"
                     workTitle="worktitle"
-                    knowledge="knowledge"
+                    techs={["technology1", "technology2", "technology3"]}
                 />
                 <p>作成中</p>
                 <Link href="/">Go back to Home</Link>
