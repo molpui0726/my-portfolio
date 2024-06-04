@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "@/app/Layout";
-import { MediaObject } from "@/app/components/organisms/MediaObject";
 import { WorkCard } from "@/app/components/molecules/card/WorkCard";
+import { MediaObject } from "@/app/components/organisms/MediaObject";
+import { Modal } from "@/app/components/organisms/Modal";
 
 const About: React.FC = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
-        <div>
+        <div className="bg-white">
             <Layout>
                 <MediaObject
                     src="/images/robot_and_hogeta.jpeg"
@@ -21,6 +32,15 @@ const About: React.FC = () => {
                     src="/images/robot_and_hogeta.jpeg"
                     workTitle="worktitle"
                     techs={["technology1", "technology2", "technology3"]}
+                    onClick={openModal}
+                />
+                <Modal
+                    isOpen={isModalOpen}
+                    title="モーダル確認"
+                    src="/images/robot_and_hogeta.jpeg"
+                    alt="走行体とホゲータ"
+                    text="モーダル確認"
+                    onCancel={closeModal}
                 />
                 <p>作成中</p>
                 <Link href="/">Go back to Home</Link>

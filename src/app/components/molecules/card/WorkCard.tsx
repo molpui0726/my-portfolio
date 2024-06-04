@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import { Modal } from "@/app/components/organisms/Modal"
 
 type WorkCardProps = {
     src: string;
     alt?: string;
     workTitle: string;
     techs: string[];
+    onClick: () => void;
 }
 
-export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs }) => {
+export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, onClick }) => {
     return (
-        <a href="">
+        <a onClick={onClick}>
             <div className="flex justify-center w-full">
                 <div className="relative group flex flex-col shadow-2xl rounded-xl overflow-hidden md:w-80 md:-ml-16">
                     <Image className="object-cover object-center w-full rounded-t-xl lg:h-60 md:h-48"
