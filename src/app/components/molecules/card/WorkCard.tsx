@@ -12,8 +12,8 @@ type WorkCardProps = {
 
 export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, onClick }) => {
     return (
-            <div className="flex justify-center w-full" onClick={onClick}>
-                <div className="relative group flex flex-col shadow-2xl rounded-xl overflow-hidden md:w-80 md:-ml-16 cursor-pointer">
+            <div className="flex justify-center w-full">
+                <div className="relative group flex flex-col shadow-2xl rounded-xl overflow-hidden md:w-80 md:-ml-16 cursor-pointer" onClick={onClick}>
                     <Image className="object-cover object-center w-full rounded-t-xl lg:h-60 md:h-48"
                         src={src}
                         alt={alt ?? workTitle}
