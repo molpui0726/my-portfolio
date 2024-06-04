@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { GithubIcon } from "./SnsIcon";
+import { GithubIcon } from "./GithubIcon";
 
 const meta: Meta = {
     title: "components/atoms/icons/GithubIcon",
