@@ -15,10 +15,10 @@ type Story = StoryObj<typeof Modal>;
 
 export const Default: Story = {
     args: {
-        isOpen: true,
-        title: 'Sample Title',
+        isModalOpen: true,
         src: '/images/robot_and_hogeta.jpeg',
         alt: 'Modal',
-        text: 'Sample Text',
+        modalTitle: 'Sample Title',
+        modalText: 'Sample Text',
     },
 };
