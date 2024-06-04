@@ -26,7 +26,7 @@ export const Modal: React.FC<ModalProps> = ({ open, title, src, alt, text, onCan
                     {title}
                 </h1>
                 <div className="grid-cols-2 flex flex-col md:flex-row md:gap-4 h-full w-full">
-                    <div className="sm:w-full md:w-1/2 overflow-hidden bg-gray mb-4 md:mb-0 flex items-center justify-center">
+                    <div className="sm:w-full md:w-1/2 md:mx-3 overflow-hidden bg-gray mb-4 md:mb-0 flex items-center justify-center">
                         <Image className="rounded-lg object-cover object-center"
                             src={src}
                             width={600} height={1000}
