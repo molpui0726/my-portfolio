@@ -7,13 +7,24 @@ type WorkCardProps = {
     alt?: string;
     workTitle: string;
     techs: string[];
-    onClick: () => void;
+    modalText: string; // モーダル画面の説明文
 }
 
-export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, onClick }) => {
+export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, modalText }) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
+        <>
             <div className="flex justify-center w-full">
-                <div className="relative group flex flex-col shadow-2xl rounded-xl overflow-hidden md:w-80 md:-ml-16 cursor-pointer" onClick={onClick}>
+                <div className="relative group flex flex-col shadow-2xl rounded-xl overflow-hidden md:w-80 md:-ml-16 cursor-pointer" onClick={openModal}>
                     <Image className="object-cover object-center w-full rounded-t-xl lg:h-60 md:h-48"
                         src={src}
                         alt={alt ?? workTitle}
@@ -35,5 +46,14 @@ export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, 
                     </div>
                 </div>
             </div>
+            <Modal
+                isModalOpen={isModalOpen}
+                src={src}
+                alt={alt ?? workTitle}
+                modalTitle={workTitle}
+                modalText={modalText}
+                closeModal={closeModal}
+            />
+        </>
     );
 };
