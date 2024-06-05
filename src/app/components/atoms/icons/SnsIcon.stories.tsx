@@ -20,23 +20,47 @@ type Story = StoryObj<typeof SnsIcon>;
 export const GithubIconStory: Story = {
     args: {
         href: "https://github.com/YKhm20020",
-        src: "/images/icons/github-mark-white.png",
+        src: "/images/icons/github-mark.png",
         alt: "GithubIcon",
     },
 };
 
-export const XTwitterIcon: Story = {
+export const GithubWhiteIconStory: Story = {
     args: {
-        href: "https://x.com/Hogeta_KL",
-        src: "/images/icons/XTwitter-logo-white.png",
-        alt: "XTwitterIcon",
+        href: "https://github.com/YKhm20020",
+        src: "/images/icons/github-mark-white.png",
+        alt: "GithubIcon",
     },
 };
 
 export const QiitaIcon: Story = {
     args: {
         href: "https://qiita.com/hogeta_KL",
+        src: "/images/icons/qiita-icon.png",
+        alt: "QiitaIcon",
+    }
+};
+
+export const QiitaWhiteIcon: Story = {
+    args: {
+        href: "https://qiita.com/hogeta_KL",
         src: "/images/icons/qiita-white-icon.png",
         alt: "QiitaIcon",
     }
+};
+
+export const XTwitterIcon: Story = {
+    args: {
+        href: "https://x.com/Hogeta_KL",
+        src: "/images/icons/XTwitter-logo-black.png",
+        alt: "XTwitterIcon",
+    },
+};
+
+export const XTwitterWhiteIcon: Story = {
+    args: {
+        href: "https://x.com/Hogeta_KL",
+        src: "/images/icons/XTwitter-logo-white.png",
+        alt: "XTwitterIcon",
+    },
 };
