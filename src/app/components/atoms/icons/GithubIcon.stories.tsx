@@ -17,10 +17,4 @@ export default meta;
 
 type Story = StoryObj<typeof GithubIcon>;
 
-export const GithubIconStory: Story = {
-	args: {
-		href: 'https://github.com/YKhm20020',
-		src: '/images/icons/github-mark.png',
-		alt: 'GithubIcon',
-	},
-};
+export const GithubIconStory: Story = {};

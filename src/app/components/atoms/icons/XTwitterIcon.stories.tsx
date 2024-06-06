@@ -17,10 +17,4 @@ export default meta;
 
 type Story = StoryObj<typeof XTwitterIcon>;
 
-export const XTwitterIconStory: Story = {
-	args: {
-		href: 'https://x.com/Hogeta_KL',
-		src: '/images/icons/XTwitter-logo-black.png',
-		alt: 'XTwitterIcon',
-	},
-};
+export const XTwitterIconStory: Story = {};
