@@ -6,7 +6,8 @@
 
 - Next.js
 - tailwindcss
-- storybook
+- Storybook
+- Biome
 - versel
 
 
