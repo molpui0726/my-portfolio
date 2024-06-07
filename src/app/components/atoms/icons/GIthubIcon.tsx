@@ -1,6 +1,6 @@
 import type React from 'react';
 import Link from 'next/link';
-import GithubLogo from 'public/images/icons/GithubLogo.svg';
+import GithubLogo from '/public/images/icons/GithubLogo.svg';
 
 export const GithubIcon: React.FC = () => {
 	return (
