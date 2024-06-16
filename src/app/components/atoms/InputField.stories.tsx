@@ -16,6 +16,13 @@ type Story = StoryObj<typeof InputField>;
 
 export const Default: Story = {
 	args: {
+		input: '',
+		hint: '',
+	},
+};
+
+export const InputText: Story = {
+	args: {
 		input: 'sample input',
 		hint: 'sample hint',
 	},
