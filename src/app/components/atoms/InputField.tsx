@@ -2,11 +2,11 @@ import type React from 'react';
 import { useState, memo } from 'react';
 
 type InputFieldProps = {
-	input: string | number;
-	hint: string | number;
+	input?: string | number;
+	hint?: string | number;
 };
 
-const InputField: React.FC<InputFieldProps> = ({ input, hint }) => {
+function InputField({ input, hint }: InputFieldProps) {
 	const [isInvalid, setIsInvalid] = useState<boolean>(false);
 
 	// パスワードフォーム用のパスワード表示/非表示のフラグ
@@ -24,12 +24,12 @@ const InputField: React.FC<InputFieldProps> = ({ input, hint }) => {
 	return (
 		<div className='grid gap-6 mb-6 md:grid-cols-2'>
 			<div className='flex gap-4'>
-				<label htmlFor={input.toString()}>{input}</label>
+				<label htmlFor={String(input)}>{input}</label>
 				<input
-					id={input.toString()}
+					id={String(input)}
 					type='text'
 					className={`bg-gray-50 w-50% border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 ${isInvalid ? 'border-red-500' : ''}`}
-					placeholder={hint.toString()}
+					placeholder={String(hint)}
 					onChange={(event) => {
 						validate(event);
 					}}
@@ -37,6 +37,8 @@ const InputField: React.FC<InputFieldProps> = ({ input, hint }) => {
 			</div>
 		</div>
 	);
-};
+}
 
-export const MemolizedInputField = memo(InputField);
+export function MemolizedInputField() {
+	memo(InputField);
+}
