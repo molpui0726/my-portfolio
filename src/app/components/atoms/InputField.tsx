@@ -30,6 +30,7 @@ function InputField({ input, hint }: InputFieldProps) {
 					type='text'
 					className={`bg-gray-50 w-50% border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 ${isInvalid ? 'border-red-500' : ''}`}
 					placeholder={String(hint)}
+					value={input}
 					onChange={(event) => {
 						validate(event);
 					}}
