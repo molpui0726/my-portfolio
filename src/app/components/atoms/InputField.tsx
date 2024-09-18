@@ -26,6 +26,7 @@ export const InputField: React.FC<InputFieldProps> = ({
 	// const [show, setShow] = useState<boolean>(false);
 	// const handleClick = () => setShow(!show);
 
+	// 入力内容のバリデーション
 	const validateInput = useCallback(
 		(inputValue: string | number) => {
 			if (required && String(inputValue).trim() === '') {
@@ -40,6 +41,7 @@ export const InputField: React.FC<InputFieldProps> = ({
 		[required, validate, errorMessage],
 	);
 
+	// 入力内容が変わったときの処理
 	const handleChange = useCallback(
 		(event: React.ChangeEvent<HTMLInputElement>) => {
 			const newValue = event.target.value;
@@ -48,9 +50,10 @@ export const InputField: React.FC<InputFieldProps> = ({
 				validateInput(newValue);
 			}
 		},
-		[touched],
+		[touched, validateInput],
 	);
 
+	// 入力フィールドからフォーカスを外したときの処理
 	const handleBlur = useCallback(() => {
 		setTouched(true);
 		validateInput(value);
