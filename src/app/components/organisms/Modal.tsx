@@ -21,7 +21,7 @@ export const Modal: React.FC<ModalProps> = ({
 }) => {
 	// キー入力時の処理
 	const handleKeyDown = useCallback(
-		(event: KeyboardEvent) => {
+		(event: React.KeyboardEvent<HTMLDivElement>) => {
 			if (event.key === 'Escape') {
 				onClose();
 			}
@@ -70,7 +70,6 @@ export const Modal: React.FC<ModalProps> = ({
                         hover:text-gray-500 hover:bg-gray-100
                         focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'
 						onClick={onClose}
-						onKeyDown={handleKeyDown}
 					>
 						<span className='sr-only'>Close menu</span>
 						<svg
