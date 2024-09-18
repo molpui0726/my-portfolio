@@ -29,3 +29,12 @@ export const InputText: Story = {
 		hint: 'sample hint',
 	},
 };
+
+export const Required: Story = {
+	args: {
+		label: 'input required label',
+		initialValue: '',
+		hint: 'required',
+		required: true,
+	},
+};
