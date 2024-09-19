@@ -36,7 +36,7 @@ export const CloseModal: Story = {
 		modalText: 'Sample Text',
 		onClose: fn(),
 	},
-	play: async ({ args, canvasElement }) => {
+	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 		const closeButton = canvas.getByRole('button');
 		await expect(closeButton).toBeInTheDocument();
