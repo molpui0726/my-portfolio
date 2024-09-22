@@ -1,16 +1,18 @@
+'use client';
+
 import type React from 'react';
-import { type ReactNode, useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 type NavButtonProps = {
 	href: string;
-	children: ReactNode;
+	children: React.ReactNode;
 };
 
 const NavButton: React.FC<NavButtonProps> = ({ href, children }: NavButtonProps) => {
-	const router = useRouter();
-	const isActive = router.pathname === href;
+	const pathname = usePathname();
+	const isActive = pathname === href;
 
 	const [isHovered, setIsHovered] = useState(false);
 
