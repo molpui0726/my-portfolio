@@ -1,5 +1,4 @@
 import type React from 'react';
-import layout from '@/app/layout';
 import Link from 'next/link';
 
 const Home: React.FC = () => {
