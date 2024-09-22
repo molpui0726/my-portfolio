@@ -16,7 +16,7 @@ const NavButton: React.FC<NavButtonProps> = ({ href, children }: NavButtonProps)
 	return (
 		<Link
 			href={href}
-			className={`bg-neutral-950 text-stone-300 text-base px-2 py-1 rounded-full text-transition md:duration-700 ease-in-out
+			className={`bg-neutral-950 text-stone-300 text-base px-2 py-1 rounded-full text-transition duration-700 ease-in-out
                         hover:bg-white hover:text-black hover:text-lg link-hover
                         ${isActive ? '!bg-white text-stone-600 text-lg' : ''}`}
 		>
