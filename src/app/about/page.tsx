@@ -1,11 +1,7 @@
 import type React from 'react';
-import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { WorkCard } from '@/app/components/molecules/card/WorkCard';
 import { MediaObject } from '@/app/components/organisms/MediaObject';
-import { Modal } from '@/app/components/organisms/Modal';
-import { XTwitterIcon } from '@/app/components/atoms/icons/XTwitterIcon';
 
 const About: React.FC = () => {
 	return (
