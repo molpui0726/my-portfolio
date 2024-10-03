@@ -10,8 +10,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<html lang='ja'>
 			<body>
-				<Header />
-				{children}
+				<main>
+					<Header />
+					{children}
+				</main>
 			</body>
 		</html>
 	);
