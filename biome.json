@@ -10,6 +10,9 @@
 		"indentWidth": 4,
 		"lineWidth": 100
 	},
+	"files": {
+		"ignore": ["src/types/svgr.d.ts"]
+	},
 	"javascript": {
 		"parser": {
 			"unsafeParameterDecoratorsEnabled": true
