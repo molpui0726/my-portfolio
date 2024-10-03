@@ -1,7 +1,7 @@
-import React from 'react';
 import NavButton from '@/components/atoms/button/NavButton';
+import type React from 'react';
 
-const Header = () => {
+const Header: React.FC = () => {
 	return (
 		<div className='bg-black p-4 h-16'>
 			<nav className='flex justify-end gap-5'>

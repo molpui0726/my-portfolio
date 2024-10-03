@@ -1,5 +1,5 @@
-import type React from 'react';
 import Link from 'next/link';
+import type React from 'react';
 
 const Contact: React.FC = () => {
 	return (

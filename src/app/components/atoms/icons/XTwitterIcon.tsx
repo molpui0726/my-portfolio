@@ -1,5 +1,5 @@
-import type React from 'react';
 import Link from 'next/link';
+import type React from 'react';
 import XTwitterSVG from '/public/images/icons/XTwitter-logo.svg';
 
 export const XTwitterIcon: React.FC = () => {

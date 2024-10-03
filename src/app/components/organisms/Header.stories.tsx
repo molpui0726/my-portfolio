@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import * as NavButtonStories from '@/components/atoms/button/NavButton.stories';
+import type { Meta, StoryObj } from '@storybook/react';
 import Header from './Header';
 
 const meta = {

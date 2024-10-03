@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { withActions } from '@storybook/addon-actions/decorator';
+import type { Meta, StoryObj } from '@storybook/react';
 import { QiitaIcon } from './QiitaIcon';
 
 const meta: Meta = {

@@ -1,6 +1,6 @@
+import { withActions } from '@storybook/addon-actions/decorator';
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, within } from '@storybook/test';
-import { withActions } from '@storybook/addon-actions/decorator';
 import { Modal } from './Modal';
 
 const meta = {

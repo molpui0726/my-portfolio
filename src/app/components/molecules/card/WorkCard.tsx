@@ -1,9 +1,9 @@
 'use client';
 
+import { Modal } from '@/app/components/organisms/Modal';
+import Image from 'next/image';
 import type React from 'react';
 import { useState } from 'react';
-import Image from 'next/image';
-import { Modal } from '@/app/components/organisms/Modal';
 
 type WorkCardProps = {
 	src: string;
@@ -30,6 +30,11 @@ export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, 
 				className='relative group flex flex-col shadow-2xl rounded-xl overflow-hidden w-60 md:w-48 lg:w-56 cursor-pointer transition-all duration-300 ease-in-out
                 hover:scale-105'
 				onClick={onOpenModal}
+				onKeyDown={(e) => {
+					if (e.key === 'Enter') {
+						onOpenModal();
+					}
+				}}
 			>
 				<Image
 					className='object-cover object-center w-60 md:w-48 lg:w-56 h-60'
@@ -47,9 +52,9 @@ export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, 
 						{(Object.keys(techs).length > 0
 							? Object.values(techs)
 							: ['No links available']
-						).map((item, index) => (
+						).map((item) => (
 							<p
-								key={index}
+								key={item}
 								className='text-base text-transparent group-hover:text-gray-600 truncate transition-colors duration-500 delay-200 ease-in-out'
 							>
 								{item}

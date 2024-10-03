@@ -1,6 +1,6 @@
-import type React from 'react';
-import { useEffect, useCallback } from 'react';
 import Image from 'next/image';
+import type React from 'react';
+import { useCallback, useEffect } from 'react';
 
 type ModalProps = {
 	isOpen: boolean;

@@ -1,5 +1,5 @@
 import type React from 'react';
-import { useState, useCallback } from 'react';
+import { useCallback, useState } from 'react';
 
 type InputFieldProps = {
 	label: string;
