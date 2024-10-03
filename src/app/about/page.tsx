@@ -1,7 +1,7 @@
-import type React from 'react';
-import Link from 'next/link';
 import { WorkCard } from '@/app/components/molecules/card/WorkCard';
 import { MediaObject } from '@/app/components/organisms/MediaObject';
+import Link from 'next/link';
+import type React from 'react';
 
 const About: React.FC = () => {
 	return (
