@@ -24,7 +24,7 @@ const Home: React.FC = () => {
 					Welcome to My Portfolio
 				</h1>
 				<p className='text-xl text-gray-600'>
-					I'm a master's student in Miyazaki University, aspiring front-end web developer
+					I&apos;m a master&apos;s student in Miyazaki University, aspiring front-end web developer
 				</p>
 				<div
 					className={`mt-12 grid gap-8 ${sectionCards.length === 1 ? 'md:grid-cols-1' : 'md:grid-cols-2'} lg:grid-cols-${Math.min(sectionCards.length, 3)} mb-12`}
