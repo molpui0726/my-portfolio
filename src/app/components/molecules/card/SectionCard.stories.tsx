@@ -22,6 +22,5 @@ export const Default: Story = {
 		title: 'default title',
 		description: 'default description in Storybook',
 		linkHref: '/',
-		linkText: 'ToLink',
 	},
 };
