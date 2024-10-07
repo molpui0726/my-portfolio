@@ -8,11 +8,11 @@ const Products: React.FC = () => {
 				src='/images/robot_and_hogeta.jpeg'
 				alt='走行体とホゲータ'
 				heading='Products'
-                text='成果物について紹介するページです。Webアプリケーション開発のアルバイトや、産学連携の研究など、
+				text='成果物について紹介するページです。Webアプリケーション開発のアルバイトや、産学連携の研究など、
                 一部詳細を非公開としているものもあります。組み込み開発からサーバー構築やAWS, Google Cloud など、色々やってます。'
 			/>
 		</div>
 	);
 };
 
-export default Products
+export default Products;
