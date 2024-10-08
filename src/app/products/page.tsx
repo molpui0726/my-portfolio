@@ -48,10 +48,19 @@ const productsData = [
         カスタムフック、自己紹介・成果物の閲覧ページを担当。`,
 	},
 	{
+		id: 4,
+		src: '/images/portfolio.png',
+		alt: 'ポートフォリオサイトのメインページ',
+		workTitle: 'ポートフォリオサイト',
+		techs: ['Next.js', 'Tailwindcss', 'Storybook'],
+		modalText: `ポートフォリオサイト。現在も更新中。
+        Biome や Vercel の CI 、Storybook の導入など、個人開発では不要なものも使いたかったので利用。`,
+	},
+	{
+		id: 5,
 		src: '/images/icons/qiita-icon.png',
 		alt: 'Qiitaの緑ロゴ',
 		workTitle: 'Qiita記事投稿',
-		techs: ['Apache', 'Roundcube', 'Sympa'],
 		modalText: `2023年6月からおおよそ月1ペースで、Qiitaに記事を投稿。
         アルバイトで解決までに難航した内容や、ETロボコンについて、ハッカソンで行った環境構築など、
         多岐に渡って投稿。主にフロント分野やETロボコンや研究で使う C++, Python の内容が多い。`,
