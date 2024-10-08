@@ -56,13 +56,16 @@ export const Modal: React.FC<ModalProps> = ({
 	}
 
 	return (
-		<div className='fixed inset-0 z-50 flex items-center justify-center　px-4 sm:px-6 lg:px-16 py-12'>
+		<div
+			className='fixed inset-0 z-50 flex items-center justify-center
+        px-4 sm:px-6 lg:px-16 py-12'
+		>
 			<div
 				className='fixed inset-0 bg-black bg-opacity-50'
 				onClick={onClose}
 				onKeyDown={handleKeyDown}
 			/>
-			<div className='bg-white rounded-md p-5 flex flex-col items-center justify-center z-10'>
+			<div className='bg-white rounded-md p-5 flex flex-col items-center justify-center z-10 max-w-screen-lg max-h-screen'>
 				<div className='relative mb-2 w-full'>
 					<button
 						type='button'
@@ -89,14 +92,14 @@ export const Modal: React.FC<ModalProps> = ({
 						</svg>
 					</button>
 				</div>
-				<h1 className='text-4xl font-bold mb-4 md:tracking-wide'>{modalTitle}</h1>
-				<div className='flex flex-col md:flex-row md:gap-4 h-full w-full'>
-					<div className='sm:w-full md:w-1/2 md:mx-3 overflow-hidden bg-gray mb-4 md:mb-0 flex items-center justify-center'>
+				<h1 className='text-4xl font-bold mb-8 md:tracking-wide'>{modalTitle}</h1>
+				<div className='flex flex-col md:flex-row md:gap-4'>
+					<div className='sm:w-full md:w-1/2 md:mx-3 overflow-hidden bg-gray mb-8 md:mb-2 flex items-center justify-center'>
 						<Image
-							className='rounded-lg object-cover object-center'
+							className='rounded-lg max-h-96'
 							src={src}
-							width={600}
-							height={800}
+							width={400}
+							height={400}
 							alt={alt}
 						/>
 					</div>
