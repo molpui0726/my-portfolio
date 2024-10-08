@@ -84,7 +84,7 @@ const Products: React.FC = () => {
 						src={product.src}
 						alt={product.alt}
 						workTitle={product.workTitle}
-						techs={product.techs}
+						techs={product.techs || []}
 						modalText={product.modalText}
 					/>
 				))}
