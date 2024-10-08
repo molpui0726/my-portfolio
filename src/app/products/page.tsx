@@ -41,8 +41,16 @@ const Products: React.FC = () => {
 					modalText='研究室のサーバー移転に伴い、サーバーを構築。
                     Webサーバー、メールサーバー、メーリングリストサーバーを構築。
                     OpenSSHやApacheの脆弱性対応など、脆弱性には随時対応中。卒業まで保守作業を続ける予定。
-                    定期監査では一回で脆弱性ゼロの報告をいただきました。
-                    '
+                    定期監査では一回で脆弱性ゼロの報告をいただきました。'
+				/>
+				<WorkCard
+					src='/images/icons/qiita-icon.png'
+					alt='Qiitaの緑ロゴ'
+					workTitle='Qiita記事投稿'
+					techs={['Apache', 'Roundcube', 'Sympa']}
+					modalText='2023年6月からおおよそ月1ペースで、Qiitaに記事を投稿。
+                    アルバイトで解決までに難航した内容や、ETロボコンについて、ハッカソンで行った環境構築など、多岐に渡って投稿。
+                    主にフロント分野やETロボコンや研究で使う C++, Python の内容が多い。'
 				/>
 			</div>
 		</div>
