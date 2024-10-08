@@ -3,8 +3,8 @@ import { WorkCard } from '../components/molecules/card/WorkCard';
 import { MediaObject } from '../components/organisms/MediaObject';
 
 const productsData = [
-    {
-        id: 0,
+	{
+		id: 0,
 		src: '/images/robocon.png',
 		alt: '走行帯が走っている写真とモデルの画像',
 		workTitle: 'ETロボコン',
@@ -15,8 +15,8 @@ const productsData = [
         2024年はチームリーダーを務め、九州地区大会で総合準優勝、モデル優勝の成績を収めました。
         10人ほどで半年間開発を続け、コード量はテスト含めて9000行から10000行ほど。`,
 	},
-    {
-        id: 1,
+	{
+		id: 1,
 		src: '/images/part_time_job.png',
 		alt: 'Webアプリケーションのアルバイトでの技術スタック',
 		workTitle: 'エンジニアバイト',
@@ -24,8 +24,8 @@ const productsData = [
 		modalText: `Webアプリケーション開発のアルバイトに1年強従事。
         主にフロントを担当しており、現在は AWS, Google Cloud も利用。`,
 	},
-    {
-        id: 2,
+	{
+		id: 2,
 		src: '/images/server.png',
 		alt: 'サーバー構築',
 		workTitle: 'サーバー構築',
@@ -35,8 +35,8 @@ const productsData = [
         OpenSSHやApacheの脆弱性対応など、脆弱性には随時対応中。卒業まで保守作業を続ける予定。
         定期監査では一回で脆弱性ゼロの報告をいただきました。`,
 	},
-    {
-        id: 3,
+	{
+		id: 3,
 		src: '/images/OnFes.jpg',
 		alt: 'ハッカソンで開発したWebアプリ OnFes',
 		workTitle: 'OnFes',
