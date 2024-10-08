@@ -44,6 +44,16 @@ const Products: React.FC = () => {
                     定期監査では一回で脆弱性ゼロの報告をいただきました。'
 				/>
 				<WorkCard
+					src='/images/OnFes.jpg'
+					alt='ハッカソンで開発したWebアプリ OnFes'
+					workTitle='OnFes'
+					techs={['React', 'Tailwindcss', 'TanStack Router']}
+					modalText='技育CAMPハッカソンにて、「祭」というテーマをオンラインフェスとして消化し、作成。
+                    同じ趣味を持っている人が自己紹介や成果物を投稿し、交流できるというWebアプリ。
+                    1週間の開発期間で、4人で開発を進める。フロント・バックでひとりずつ経験者・未経験者を割り振り、ペアプロ形式で進行。
+                    フロントの経験者として開発を進め、コンポーネント全体の設計やカスタムフック、自己紹介・成果物の閲覧ページを担当。'
+				/>
+				<WorkCard
 					src='/images/icons/qiita-icon.png'
 					alt='Qiitaの緑ロゴ'
 					workTitle='Qiita記事投稿'
