@@ -33,8 +33,29 @@
 		"rules": {
 			"recommended": true,
 			"correctness": {
+				"noConstAssign": "error",
+				"noSelfAssign": "error",
 				"noUndeclaredVariables": "error",
-				"useHookAtTopLevel": "error"
+				"noUnusedVariables": "warn",
+				"noVoidTypeReturn": "error",
+				"useHookAtTopLevel": "error",
+				"useExhaustiveDependencies": "warn"
+			},
+			"style": {
+				"useConst": "error",
+				"useSelfClosingElements": "error",
+				"useImportType": "error"
+			},
+			"suspicious": {
+				"noArrayIndexKey": "error",
+				"noCommentText": "error",
+				"noCompareNegZero": "error",
+				"noExplicitAny": "warn",
+				"noImportAssign": "error",
+				"noRedeclare": "error",
+				"noSelfCompare": "error",
+				"noShadowRestrictedNames": "error",
+				"useValidTypeof": "error"
 			}
 		}
 	}
