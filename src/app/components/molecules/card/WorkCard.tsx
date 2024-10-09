@@ -6,10 +6,10 @@ import type React from 'react';
 import { useState } from 'react';
 
 type WorkCardProps = {
-	src: string;
-	alt?: string;
-	workTitle: string;
-	techs: string[];
+	src: string; // カードとモーダルに表示する画像パス
+	alt?: string; // 画像が表示されないときに代わりに表示する文字
+	workTitle: string; // 成果物のタイトル
+	techs: string[]; // カードホバー時に浮かび上がる技術スタック
 	modalText: string; // モーダル画面の説明文
 };
 
@@ -48,18 +48,12 @@ export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, 
 					<h1 className='text-2xl font-semibold text-neutral-800 mb-3 truncate py-1'>
 						{workTitle}
 					</h1>
-					<div className='overflow-hidden'>
-						{(Object.keys(techs).length > 0
-							? Object.values(techs)
-							: ['No links available']
-						).map((item) => (
-							<p
-								key={item}
-								className='text-base text-transparent group-hover:text-gray-600 truncate transition-colors duration-500 delay-200 ease-in-out'
-							>
-								{item}
-							</p>
-						))}
+					<div className='overflow-hidden text-base group-hover:text-gray-600 text-transparent truncate transition-colors duration-500 delay-200 ease-in-out'>
+						{techs && techs.length > 0 ? (
+							techs.map((item) => <p key={item}>{item}</p>)
+						) : (
+							<p>No technologies</p>
+						)}
 					</div>
 				</div>
 			</div>

@@ -5,7 +5,7 @@ import type React from 'react';
 
 const About: React.FC = () => {
 	return (
-		<div className='bg-white'>
+		<div className='bg-white flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 			<MediaObject
 				src='/images/robot_and_hogeta.jpeg'
 				alt='走行体とホゲータ'
