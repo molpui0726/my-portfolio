@@ -6,10 +6,10 @@ import type React from 'react';
 import { useState } from 'react';
 
 type WorkCardProps = {
-	src: string;
-	alt?: string;
-	workTitle: string;
-	techs: string[];
+	src: string; // カードとモーダルに表示する画像パス
+	alt?: string; // 画像が表示されないときに代わりに表示する文字
+	workTitle: string; // 成果物のタイトル
+	techs: string[]; // カードホバー時に浮かび上がる技術スタック
 	modalText: string; // モーダル画面の説明文
 };
 

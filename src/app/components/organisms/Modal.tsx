@@ -5,12 +5,12 @@ import type React from 'react';
 import { useCallback, useEffect } from 'react';
 
 type ModalProps = {
-	isOpen: boolean;
-	src: string;
-	alt: string;
-	modalTitle: string;
-	modalText: string;
-	onClose: () => void;
+	isOpen: boolean; // モーダルを開くかどうかを監視する状態変数 true: 開く
+	src: string; // 左に配置する画像の画像パス
+	alt: string; // 画像が表示されないときに変わりに表示するテキスト
+	modalTitle: string; // 右上部に配置する題
+	modalText: string; // 題の下に配置するテキスト
+	onClose: () => void; // モーダルを閉じる関数
 };
 
 export const Modal: React.FC<ModalProps> = ({

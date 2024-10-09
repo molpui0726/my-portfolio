@@ -2,9 +2,9 @@ import Link from 'next/link';
 import type React from 'react';
 
 type SectionCardProps = {
-	title: string;
-	description: string;
-	linkHref: string;
+	title: string; // 上部に配置する題
+	description: string; // 中央部に配置する詳細を表示するテキスト
+	linkHref: string; // 下部に配置するテキストから遷移する先のページのパス
 };
 
 export const SectionCard: React.FC<SectionCardProps> = ({ title, description, linkHref }) => {

@@ -2,6 +2,7 @@ import type React from 'react';
 import { WorkCard } from '../components/molecules/card/WorkCard';
 import { MediaObject } from '../components/organisms/MediaObject';
 
+// 各成果物カードに渡す情報についてのオブジェクト
 const productsData = [
 	{
 		id: 0,

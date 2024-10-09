@@ -2,10 +2,10 @@ import Image from 'next/image';
 import type React from 'react';
 
 type MediaObjectProps = {
-	src: string;
-	alt: string;
-	heading: string;
-	text: string;
+	src: string; // 左に配置する画像の画像パス
+	alt: string; // 画像が表示されないときに変わりに表示する文字列
+	heading: string; // 右上方に配置する題
+	text: string; // 題の下に配置する文字列
 };
 
 export const MediaObject: React.FC<MediaObjectProps> = ({ src, alt, heading, text }) => {
