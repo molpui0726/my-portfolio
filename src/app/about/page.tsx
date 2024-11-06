@@ -15,14 +15,6 @@ const About: React.FC = () => {
 					'プログラミングを専攻する学科に所属しており、研究やETロボコン、Webアプリケーション開発のアルバイトなどを行っております！',
 				]}
 			/>
-			<WorkCard
-				src='/images/robot_and_hogeta.jpeg'
-				workTitle='Worktitle'
-				techs={['technology1', 'technology2', 'technology3']}
-				modalText='ワークカード確認'
-			/>
-			<p>作成中</p>
-			<Link href='/'>Go back to Home</Link>
 		</div>
 	);
 };
