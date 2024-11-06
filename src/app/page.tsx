@@ -5,13 +5,19 @@ const sectionCards = [
 	{
 		id: 1,
 		title: 'About Me',
-		description: '自分や所属している大学・組織について紹介するページ',
+		description: '自分や所属している大学・組織についてのページ',
 		linkHref: '/about',
 	},
 	{
 		id: 2,
+		title: 'ETRobocon',
+		description: '最も力を入れて活動したETロボコンについてのページ',
+		linkHref: '/etrobocon',
+	},
+	{
+		id: 3,
 		title: 'My Products',
-		description: '今まで作成してきた成果物をまとめたページ',
+		description: '今まで作成してきた成果物についてのページ',
 		linkHref: '/products',
 	},
 ];
