@@ -75,8 +75,11 @@ const Products: React.FC = () => {
 				src='/images/robot_and_hogeta.jpeg'
 				alt='走行体とホゲータ'
 				heading='Products'
-				text='成果物について紹介するページです。Webアプリケーション開発のアルバイトや、産学連携の研究など、
-                一部詳細を非公開としているものもあります。組み込み開発からサーバー構築やAWS, Google Cloud など、色々やってます。'
+				texts={[
+					'成果物について紹介するページです。',
+					'Webアプリケーション開発のアルバイトや、産学連携の研究など、一部詳細を非公開としているものもあります。',
+					'組み込み開発からサーバー構築やAWS, Google Cloud など、色々やってます。',
+				]}
 			/>
 			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:grid-rows-2 lg:gap-x-6 gap-y-8 place-items-center justify-center items-center'>
 				{productsData.map((product) => (
