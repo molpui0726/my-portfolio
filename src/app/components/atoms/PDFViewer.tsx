@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import type React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 
