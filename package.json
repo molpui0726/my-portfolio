@@ -14,13 +14,16 @@
   },
   "dependencies": {
     "@newhighsco/storybook-addon-svgr": "^2.0.16",
+    "@react-pdf/renderer": "^4.0.0",
     "@storybook/addon-styling-webpack": "^1.0.0",
     "@storybook/addon-themes": "^8.1.3",
+    "file-loader": "^6.2.0",
     "next": "^14.2.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.0",
     "react-icons": "^5.2.1",
+    "react-pdf": "^9.1.1",
     "tailwindcss-animated": "^1.1.0"
   },
   "devDependencies": {
