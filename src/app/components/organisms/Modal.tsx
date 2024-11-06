@@ -105,7 +105,7 @@ export const Modal: React.FC<ModalProps> = ({
 							alt={alt}
 						/>
 					</div>
-					<div className='md:w-1/2 flex items-center'>
+					<div className='md:w-1/2 items-start'>
 						{modalTexts.map((modalText) => (
 							<p
 								key={modalText}
