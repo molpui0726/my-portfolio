@@ -5,8 +5,6 @@ import type React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import pdfjsWorkerSrc from '../../../../pdf-worker';
 
-// pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
-
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorkerSrc;
 // pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
