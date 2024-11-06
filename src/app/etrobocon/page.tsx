@@ -1,7 +1,7 @@
+import Image from 'next/image';
 import type React from 'react';
 // import { PDFViewer } from '../components/atoms/PDFViewer';
 import { MediaObject } from '../components/organisms/MediaObject';
-import Image from 'next/image';
 
 const imageInfo = [
 	{ id: 0, src: '/images/etrobocon/model/0_abstract.jpg', alt: 'abstract' },
