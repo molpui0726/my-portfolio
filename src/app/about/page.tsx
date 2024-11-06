@@ -10,8 +10,10 @@ const About: React.FC = () => {
 				src='/images/robot_and_hogeta.jpeg'
 				alt='走行体とホゲータ'
 				heading='About Me'
-				text='宮崎大学の大学院に在籍している木村優哉です！
-                    プログラミングを専攻する学科に所属しており、研究やETロボコン、Webアプリケーション開発のアルバイトなどを行っております！'
+				texts={[
+					'宮崎大学の大学院に在籍している木村優哉です！',
+					'プログラミングを専攻する学科に所属しており、研究やETロボコン、Webアプリケーション開発のアルバイトなどを行っております！',
+				]}
 			/>
 			<WorkCard
 				src='/images/robot_and_hogeta.jpeg'
