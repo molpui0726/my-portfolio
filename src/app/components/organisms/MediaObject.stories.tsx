@@ -15,6 +15,6 @@ export const Default: Story = {
 		src: '/images/robot_and_hogeta.jpeg',
 		alt: 'MediaObject',
 		heading: 'Sample Heading',
-		text: 'Sample Text',
+		texts: ['Sample Text', 'Sample 2nd Line Text'],
 	},
 };
