@@ -1,6 +1,16 @@
 import type React from 'react';
-import { PDFViewer } from '../components/atoms/PDFViewer';
+// import { PDFViewer } from '../components/atoms/PDFViewer';
 import { MediaObject } from '../components/organisms/MediaObject';
+import Image from 'next/image';
+
+const imageInfo = [
+	{ id: 0, src: '/images/etrobocon/model/0_abstract.jpg', alt: 'abstract' },
+	{ id: 1, src: '/images/etrobocon/model/1_requirements.jpg', alt: 'requirements' },
+	{ id: 2, src: '/images/etrobocon/model/2_analysis.jpg', alt: 'analysis' },
+	{ id: 3, src: '/images/etrobocon/model/3_design1.jpg', alt: 'design1' },
+	{ id: 4, src: '/images/etrobocon/model/3_design2.jpg', alt: 'design2' },
+	{ id: 5, src: '/images/etrobocon/model/4_control.jpg', alt: 'control' },
+];
 
 const ETRobocon: React.FC = () => {
 	return (
@@ -41,7 +51,18 @@ const ETRobocon: React.FC = () => {
 				<h1 className='py-4 self-start text-3xl font-bold sm:text-4xl md:text-2xl lg:text-3xl'>
 					KatLab 2024年モデル
 				</h1>
-				<PDFViewer filePath='/ADV_093_KatLab.pdf' />
+				{/* <PDFViewer filePath='/ADV_093_KatLab.pdf' /> */}
+				{imageInfo.map((image) => (
+					<Image
+						key={image.id}
+						src={image.src}
+						alt={image.alt}
+						layout='responsive'
+						width={700}
+						height={700}
+						className='shadow-lg'
+					/>
+				))}
 			</div>
 		</div>
 	);

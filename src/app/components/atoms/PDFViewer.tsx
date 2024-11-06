@@ -3,10 +3,11 @@
 import { useEffect, useState } from 'react';
 import type React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import pdfjsWorkerSrc from '../../../../pdf-worker';
+// import pdfjsWorkerSrc from '../../../../pdf-worker';
 
-pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorkerSrc;
+// pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorkerSrc;
 // pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 type PDFViewerProps = {
 	filePath: string; // 表示するPDFのファイルパス
