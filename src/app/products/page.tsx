@@ -25,8 +25,8 @@ const productsData = [
 		workTitle: 'エンジニアバイト',
 		techs: ['TypeScript', 'Tailwindcss', 'Storybook'],
 		modalTexts: [
-			`Webアプリケーション開発のアルバイトに1年強従事。',
-            '主にフロントを担当しており、現在は AWS, Google Cloud も利用。`,
+			'Webアプリケーション開発のアルバイトに1年強従事。',
+			'主にフロントを担当しており、現在は AWS, Google Cloud も利用。',
 		],
 	},
 	{
