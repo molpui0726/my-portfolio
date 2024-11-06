@@ -25,10 +25,10 @@ export const MediaObject: React.FC<MediaObjectProps> = ({ src, alt, heading, tex
 						</div>
 					</div>
 					<div>
-						<h1 className='py-2 text-center text-5xl font-bold'>{heading}</h1>
-						<p className='text-left sm:text-center animate-fade-right animate-duration-[1600ms]'>
-							{text}
-						</p>
+						<h1 className='py-2 text-center sm:text-4xl md:text-2xl lg:text-3xl text-3xl font-bold animate-fade-right animate-duration-[1600ms]'>
+							{heading}
+						</h1>
+						<p className='text-left sm:text-center'>{text}</p>
 					</div>
 				</div>
 			</div>

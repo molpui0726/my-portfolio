@@ -29,7 +29,7 @@ export const PDFViewer: React.FC<PDFViewerProps> = ({ filePath }: PDFViewerProps
 			} else if (screenWidth < 1024) {
 				setPageWidth(700); // タブレットサイズ
 			} else {
-				setPageWidth(1000); // デスクトップサイズ
+				setPageWidth(950); // デスクトップサイズ
 			}
 		};
 
