@@ -5,10 +5,10 @@ type MediaObjectProps = {
 	src: string; // 左に配置する画像の画像パス
 	alt: string; // 画像が表示されないときに変わりに表示する文字列
 	heading: string; // 右上方に配置する題
-	text: string; // 題の下に配置する文字列
+	texts: string[]; // 題の下に配置する文字列。改行ごとに要素を分割する
 };
 
-export const MediaObject: React.FC<MediaObjectProps> = ({ src, alt, heading, text }) => {
+export const MediaObject: React.FC<MediaObjectProps> = ({ src, alt, heading, texts }) => {
 	return (
 		<div className='bg-white py-6 sm:py-8 lg:py-12'>
 			<div className='mx-auto'>
@@ -25,10 +25,14 @@ export const MediaObject: React.FC<MediaObjectProps> = ({ src, alt, heading, tex
 						</div>
 					</div>
 					<div>
-						<h1 className='py-2 text-center text-5xl font-bold'>{heading}</h1>
-						<p className='text-left sm:text-center animate-fade-right animate-duration-[1600ms]'>
-							{text}
-						</p>
+						<h1 className='pt-2 pb-4 md:py-2 text-center sm:text-4xl md:text-2xl lg:text-3xl text-3xl font-bold animate-fade-right animate-duration-[1600ms]'>
+							{heading}
+						</h1>
+						{texts.map((text) => (
+							<p key={text} className='text-left'>
+								{text}
+							</p>
+						))}
 					</div>
 				</div>
 			</div>

@@ -9,7 +9,7 @@ type ModalProps = {
 	src: string; // 左に配置する画像の画像パス
 	alt: string; // 画像が表示されないときに変わりに表示するテキスト
 	modalTitle: string; // 右上部に配置する題
-	modalText: string; // 題の下に配置するテキスト
+	modalTexts: string[]; // 題の下に配置するテキスト。改行ごとに要素を分割する。
 	onClose: () => void; // モーダルを閉じる関数
 };
 
@@ -18,7 +18,7 @@ export const Modal: React.FC<ModalProps> = ({
 	src,
 	alt,
 	modalTitle,
-	modalText,
+	modalTexts,
 	onClose,
 }) => {
 	// キー入力時の処理
@@ -105,10 +105,15 @@ export const Modal: React.FC<ModalProps> = ({
 							alt={alt}
 						/>
 					</div>
-					<div className='md:w-1/2 flex items-center'>
-						<p className='md:ml-8 text-left animate-fade-right animate-duration-[1600ms]'>
-							{modalText}
-						</p>
+					<div className='md:w-1/2 items-start'>
+						{modalTexts.map((modalText) => (
+							<p
+								key={modalText}
+								className='md:ml-8 text-left animate-fade-right animate-duration-[1600ms]'
+							>
+								{modalText}
+							</p>
+						))}
 					</div>
 				</div>
 			</div>

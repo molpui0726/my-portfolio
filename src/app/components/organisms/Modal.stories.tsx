@@ -22,7 +22,7 @@ export const Default: Story = {
 		src: '/images/robot_and_hogeta.jpeg',
 		alt: 'Modal',
 		modalTitle: 'Sample Title',
-		modalText: 'Sample Text',
+		modalTexts: ['Sample Text', 'Sample 2nd Line Text'],
 		onClose: fn(),
 	},
 };
@@ -33,7 +33,7 @@ export const CloseModal: Story = {
 		src: '/images/robot_and_hogeta.jpeg',
 		alt: 'Modal',
 		modalTitle: 'Sample Title',
-		modalText: 'Sample Text',
+		modalTexts: ['Sample Text', 'Sample 2nd Line Text'],
 		onClose: fn(),
 	},
 	play: async ({ canvasElement }) => {

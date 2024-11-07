@@ -10,10 +10,10 @@ type WorkCardProps = {
 	alt?: string; // 画像が表示されないときに代わりに表示する文字
 	workTitle: string; // 成果物のタイトル
 	techs: string[]; // カードホバー時に浮かび上がる技術スタック
-	modalText: string; // モーダル画面の説明文
+	modalTexts: string[]; // モーダル画面の説明文。改行ごとに要素を分割する
 };
 
-export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, modalText }) => {
+export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, modalTexts }) => {
 	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
 	const onOpenModal = (): void => {
@@ -62,7 +62,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, 
 				src={src}
 				alt={alt ?? workTitle}
 				modalTitle={workTitle}
-				modalText={modalText}
+				modalTexts={modalTexts}
 				onClose={onCloseModal}
 			/>
 		</>
