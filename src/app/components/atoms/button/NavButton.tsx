@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import type React from 'react';
 
 type NavButtonProps = {
-	href: string;
+	href: string | object;
 	children: React.ReactNode;
 };
 

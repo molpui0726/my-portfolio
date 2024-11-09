@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 type CommonButtonProps = {
 	buttonAttributes?: React.ButtonHTMLAttributes<HTMLButtonElement>;
-	href?: string;
+	href?: string | object;
 	children: React.ReactNode;
 };
 
