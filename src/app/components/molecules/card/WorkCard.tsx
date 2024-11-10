@@ -27,7 +27,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, 
 	return (
 		<>
 			<div
-				className='relative group flex flex-col shadow-2xl rounded-xl overflow-hidden w-60 md:w-48 lg:w-56 cursor-pointer transition-all duration-300 ease-in-out
+				className='relative group flex flex-col shadow-2xl rounded-xl overflow-hidden w-72 sm:w-60 cursor-pointer transition-all duration-300 ease-in-out
                 hover:scale-105'
 				onClick={onOpenModal}
 				onKeyDown={(e) => {
@@ -37,7 +37,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, 
 				}}
 			>
 				<Image
-					className='object-cover object-center w-60 md:w-48 lg:w-56 h-60'
+					className='object-cover object-center w-72 sm:w-60 h-60'
 					src={src}
 					alt={alt ?? workTitle}
 					width={300}

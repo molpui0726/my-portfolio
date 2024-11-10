@@ -14,16 +14,16 @@ const imageInfo = [
 
 const ETRobocon: React.FC = () => {
 	return (
-		<div className='bg-white flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+		<>
 			<div className='flex flex-col items-center py-4'>
-				<h1 className='text-4xl font-bold text-center'>ETロボコン</h1>
+				<h1 className='text-4xl font-bold text-center'>ETRobocon</h1>
 				<p className='text-lg pt-4'>
 					学生時代に最も力を入れて取り組んだ、ETロボコンについてのページ
 				</p>
 			</div>
 			<MediaObject
 				src='/images/etrobocon/etrobocon2024.png'
-				alt='ETロボコン'
+				alt='ETRobocon2024'
 				heading='ETロボコンとは'
 				texts={[
 					'ETロボコンは、高専や大学生などの学生から、企業までが参加する組み込み系の大会です。',
@@ -67,7 +67,7 @@ const ETRobocon: React.FC = () => {
 					/>
 				))}
 			</div>
-		</div>
+		</>
 	);
 };
 
