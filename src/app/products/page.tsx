@@ -69,6 +69,19 @@ const productsData = [
 	},
 	{
 		id: 4,
+		src: '/images/OnFes.jpg',
+		alt: 'ハッカソンで開発したWebアプリ Tacktail',
+		workTitle: 'Tacktail',
+		techs: ['Next.js', 'Golang', 'CSS modules'],
+		modalTexts: [
+			'LINEヤフー主催のハッカソン Open Hack U にて、カクテルのレシピを教えてくれるWebアプリを現在作成中。',
+			'カクテルは敷居が高い印象があるものの、実は1杯200円弱で作れるものも。簡単なものから作れるストーリーモードや、自分が作成したカクテルの画像をカクテルレシピの画像として登録できるコレクション機能を実装。',
+			'現在も継続開発中で、オリジナルのカクテルレシピを投稿できる機能や、レシピ検索時にフィルタリングをかけられる機能を実装予定。',
+			'2週間の開発期間(ハッカソン中)で、3人で開発を進める。フロント・バック両方を担当しつつ、Auth.js を用いたバックエンドで生成したトークンを共有する認証機能、Supabase を用いたコレクション機能での画像アップロード機能、バックエンドのデプロイも担当。',
+		],
+	},
+	{
+		id: 5,
 		src: '/images/portfolio.png',
 		alt: 'ポートフォリオサイトのメインページ',
 		workTitle: 'ポートフォリオサイト',
@@ -79,7 +92,7 @@ const productsData = [
 		],
 	},
 	{
-		id: 5,
+		id: 6,
 		src: '/images/icons/qiita-icon.png',
 		alt: 'Qiitaの緑ロゴ',
 		workTitle: 'Qiita記事投稿',
@@ -114,7 +127,7 @@ const Products: React.FC = () => {
 					/>
 				))}
 			</div>
-		</div>
+		</>
 	);
 };
 
