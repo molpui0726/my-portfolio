@@ -2,11 +2,24 @@ import type React from 'react';
 import { WorkCard } from '../components/molecules/card/WorkCard';
 import { MediaObject } from '../components/organisms/MediaObject';
 
+const descriptions = [
+	{ id: 0, description: '成果物について紹介するページです。' },
+	{
+		id: 1,
+		description:
+			'Webアプリケーション開発のアルバイトや、産学連携の研究など、一部詳細を非公開としているものもあります。',
+	},
+	{
+		id: 2,
+		description: '組み込み開発からサーバー構築やAWS, Google Cloud など、色々やってます。',
+	},
+];
+
 // 各成果物カードに渡す情報についてのオブジェクト
 const productsData = [
 	{
 		id: 0,
-		src: '/images/robocon.png',
+		src: '/images/etrobocon/driving.png',
 		alt: '走行帯が走っている写真とモデルの画像',
 		workTitle: 'ETロボコン',
 		techs: ['C++', 'Python'],
@@ -20,7 +33,7 @@ const productsData = [
 	},
 	{
 		id: 1,
-		src: '/images/part_time_job.png',
+		src: '/images/products/part_time_job.png',
 		alt: 'Webアプリケーションのアルバイトでの技術スタック',
 		workTitle: 'エンジニアバイト',
 		techs: ['TypeScript', 'Tailwindcss', 'Storybook'],
@@ -31,7 +44,7 @@ const productsData = [
 	},
 	{
 		id: 2,
-		src: '/images/server.png',
+		src: '/images/products/server.png',
 		alt: 'サーバー構築',
 		workTitle: 'サーバー構築',
 		techs: ['Apache', 'Roundcube', 'Sympa'],
@@ -43,7 +56,7 @@ const productsData = [
 	},
 	{
 		id: 3,
-		src: '/images/OnFes.jpg',
+		src: '/images/products/OnFes.jpg',
 		alt: 'ハッカソンで開発したWebアプリ OnFes',
 		workTitle: 'OnFes',
 		techs: ['React', 'Tailwindcss', 'TanStack Router'],
@@ -80,18 +93,16 @@ const productsData = [
 
 const Products: React.FC = () => {
 	return (
-		<div className='bg-white flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-			<MediaObject
-				src='/images/robot_and_hogeta.jpeg'
-				alt='走行体とホゲータ'
-				heading='Products'
-				texts={[
-					'成果物について紹介するページです。',
-					'Webアプリケーション開発のアルバイトや、産学連携の研究など、一部詳細を非公開としているものもあります。',
-					'組み込み開発からサーバー構築やAWS, Google Cloud など、色々やってます。',
-				]}
-			/>
-			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:grid-rows-2 lg:gap-x-6 gap-y-8 place-items-center justify-center items-center'>
+		<>
+			<div className='flex flex-col items-center py-4'>
+				<h1 className='text-4xl font-bold text-center'>Products</h1>
+				{descriptions.map((description) => (
+					<p key={description.id} className='text-lg pt-4'>
+						{description.description}
+					</p>
+				))}
+			</div>
+			<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-rows-2 gap-y-12 place-items-center justify-center items-center'>
 				{productsData.map((product) => (
 					<WorkCard
 						key={product.id}
