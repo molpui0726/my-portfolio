@@ -9,7 +9,8 @@ type ModalProps = {
 	src: string; // 左に配置する画像の画像パス
 	alt: string; // 画像が表示されないときに変わりに表示するテキスト
 	modalTitle: string; // 右上部に配置する題
-	modalTexts: string[]; // 題の下に配置するテキスト。改行ごとに要素を分割する。
+	modalTexts: string[]; // 題の下に配置するテキスト。改行ごとに要素を分割する
+	githubUrl?: string; // 成果物から飛べる Github の URL リンク
 	onClose: () => void; // モーダルを閉じる関数
 };
 
@@ -19,8 +20,9 @@ export const Modal: React.FC<ModalProps> = ({
 	alt,
 	modalTitle,
 	modalTexts,
+	githubUrl,
 	onClose,
-}) => {
+}: ModalProps) => {
 	// キー入力時の処理
 	const handleKeyDown = useCallback(
 		(event: React.KeyboardEvent<HTMLDivElement>) => {

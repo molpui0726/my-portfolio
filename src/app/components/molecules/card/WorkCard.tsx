@@ -11,9 +11,17 @@ type WorkCardProps = {
 	workTitle: string; // 成果物のタイトル
 	techs: string[]; // カードホバー時に浮かび上がる技術スタック
 	modalTexts: string[]; // モーダル画面の説明文。改行ごとに要素を分割する
+	githubUrl?: string;
 };
 
-export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, modalTexts }) => {
+export const WorkCard: React.FC<WorkCardProps> = ({
+	src,
+	alt,
+	workTitle,
+	techs,
+	modalTexts,
+	githubUrl,
+}) => {
 	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
 	const onOpenModal = (): void => {
@@ -63,6 +71,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, 
 				alt={alt ?? workTitle}
 				modalTitle={workTitle}
 				modalTexts={modalTexts}
+				githubUrl={githubUrl}
 				onClose={onCloseModal}
 			/>
 		</>
