@@ -54,6 +54,19 @@ const productsData: ProductsDataType = [
 	},
 	{
 		id: 2,
+		src: '/images/products/secret.jpg',
+		alt: '卒業研究',
+		workTitle: '卒業研究',
+		techs: ['Python', 'OpenCV', 'Tesseract'],
+		modalTexts: [
+			'産学連携 (企業との共同研究) として、引き続き学部時代と同じテーマで研究中。',
+			'画像処理やOCR (文字抽出)、LLM (大規模言語モデル) を用いて、帳票内の記入欄の位置を自動取得するツールを開発中。',
+			'実装の一部は AWS の Lambda, ECR, S3 を用いてクラウドコード化。',
+			'産学連携であるため、詳細な内容については非公開。',
+		],
+	},
+	{
+		id: 3,
 		src: '/images/products/server.png',
 		alt: 'サーバー構築',
 		workTitle: 'サーバー構築',
@@ -65,7 +78,7 @@ const productsData: ProductsDataType = [
 		],
 	},
 	{
-		id: 3,
+		id: 4,
 		src: '/images/products/OnFes.jpg',
 		alt: 'ハッカソンで開発したWebアプリ OnFes',
 		workTitle: 'OnFes',
@@ -79,8 +92,8 @@ const productsData: ProductsDataType = [
 		githubUrl: 'https://github.com/YKhm20020/Frontend-Festival-Booth',
 	},
 	{
-		id: 4,
-		src: '/images/OnFes.jpg',
+		id: 5,
+		src: '/images/products/Tacktail.jpeg',
 		alt: 'ハッカソンで開発したWebアプリ Tacktail',
 		workTitle: 'Tacktail',
 		techs: ['Next.js', 'Golang', 'CSS modules'],
@@ -93,19 +106,20 @@ const productsData: ProductsDataType = [
 		githubUrl: 'https://github.com/aridome222/Frontend-Tacktail',
 	},
 	{
-		id: 5,
+		id: 6,
 		src: '/images/portfolio.png',
 		alt: 'ポートフォリオサイトのメインページ',
 		workTitle: 'ポートフォリオサイト',
 		techs: ['Next.js', 'Tailwindcss', 'Storybook'],
 		modalTexts: [
 			'ポートフォリオサイト。現在も更新中。',
-			'Biome や Vercel の CI 、Storybook の導入など、個人開発では不要なものも使いたかったので利用。',
+			'Biome や Vercel の CI 、Storybook の導入など、個人開発では不要なものも勉強のために使いたかったので利用。',
+			'今はデータを直で書いているが、ヘッドレスCMS',
 		],
 		githubUrl: 'https://github.com/YKhm20020/my-portfolio',
 	},
 	{
-		id: 6,
+		id: 7,
 		src: '/images/icons/qiita-icon.png',
 		alt: 'Qiitaの緑ロゴ',
 		workTitle: 'Qiita記事投稿',
