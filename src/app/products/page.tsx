@@ -1,6 +1,15 @@
 import type React from 'react';
 import { WorkCard } from '../components/molecules/card/WorkCard';
-import { MediaObject } from '../components/organisms/MediaObject';
+
+type ProductsDataType = {
+	id: number;
+	src: string;
+	alt: string;
+	workTitle: string;
+	techs?: string[];
+	modalTexts: string[];
+	githubUrl?: string;
+}[];
 
 const descriptions = [
 	{ id: 0, description: '成果物について紹介するページです。' },
@@ -16,7 +25,7 @@ const descriptions = [
 ];
 
 // 各成果物カードに渡す情報についてのオブジェクト
-const productsData = [
+const productsData: ProductsDataType = [
 	{
 		id: 0,
 		src: '/images/etrobocon/driving.png',
@@ -30,6 +39,7 @@ const productsData = [
 			'2024年はチームリーダーを務め、九州地区大会で総合準優勝、モデル優勝の成績を収めました。',
 			'10人ほどで半年間開発を続け、コード量はテスト含めて9000行から10000行ほど。',
 		],
+		githubUrl: 'https://github.com/KatLab-MiyazakiUniv/etrobocon2024',
 	},
 	{
 		id: 1,
@@ -66,6 +76,7 @@ const productsData = [
 			'1週間の開発期間で、4人で開発を進める。フロント・バックでひとりずつ経験者・未経験者を割り振り、ペアプロ形式で進行。',
 			'フロントの経験者として開発を進め、コンポーネント全体の設計やカスタムフック、自己紹介・成果物の閲覧ページを担当。',
 		],
+		githubUrl: 'https://github.com/YKhm20020/Frontend-Festival-Booth',
 	},
 	{
 		id: 4,
@@ -79,6 +90,7 @@ const productsData = [
 			'現在も継続開発中で、オリジナルのカクテルレシピを投稿できる機能や、レシピ検索時にフィルタリングをかけられる機能を実装予定。',
 			'2週間の開発期間(ハッカソン中)で、3人で開発を進める。フロント・バック両方を担当しつつ、Auth.js を用いたバックエンドで生成したトークンを共有する認証機能、Supabase を用いたコレクション機能での画像アップロード機能、バックエンドのデプロイも担当。',
 		],
+		githubUrl: 'https://github.com/aridome222/Frontend-Tacktail',
 	},
 	{
 		id: 5,
@@ -90,6 +102,7 @@ const productsData = [
 			'ポートフォリオサイト。現在も更新中。',
 			'Biome や Vercel の CI 、Storybook の導入など、個人開発では不要なものも使いたかったので利用。',
 		],
+		githubUrl: 'https://github.com/YKhm20020/my-portfolio',
 	},
 	{
 		id: 6,
@@ -107,7 +120,7 @@ const productsData = [
 const Products: React.FC = () => {
 	return (
 		<>
-			<div className='flex flex-col items-center py-4'>
+			<div className='flex flex-col py-4'>
 				<h1 className='text-4xl font-bold text-center'>Products</h1>
 				{descriptions.map((description) => (
 					<p key={description.id} className='text-lg pt-4'>
@@ -124,6 +137,7 @@ const Products: React.FC = () => {
 						workTitle={product.workTitle}
 						techs={product.techs || []}
 						modalTexts={product.modalTexts}
+						githubUrl={product.githubUrl}
 					/>
 				))}
 			</div>
