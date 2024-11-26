@@ -9,9 +9,9 @@ type WorkCardProps = {
 	src: string; // カードとモーダルに表示する画像パス
 	alt?: string; // 画像が表示されないときに代わりに表示する文字
 	workTitle: string; // 成果物のタイトル
-	techs: string[]; // カードホバー時に浮かび上がる技術スタック
+	techs: string[]; // カードホバー時に浮かび上がる技術スタック、3つまで表示
 	modalTexts: string[]; // モーダル画面の説明文。改行ごとに要素を分割する
-	githubUrl?: string;
+	githubUrl?: string; // 成果物のGithubリンク
 };
 
 export const WorkCard: React.FC<WorkCardProps> = ({
@@ -21,7 +21,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({
 	techs,
 	modalTexts,
 	githubUrl,
-}) => {
+}: WorkCardProps) => {
 	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
 	const onOpenModal = (): void => {
