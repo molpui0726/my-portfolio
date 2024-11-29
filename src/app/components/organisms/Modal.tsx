@@ -95,7 +95,9 @@ export const Modal: React.FC<ModalProps> = ({
 						</svg>
 					</button>
 				</div>
-				<h1 className='text-4xl font-bold mb-8 md:tracking-wide'>{modalTitle}</h1>
+				<h1 className='text-4xl font-bold mb-8 md:tracking-wide animate-fade-right animate-duration-[1600ms]'>
+					{modalTitle}
+				</h1>
 				<div className='flex flex-col md:flex-row md:gap-4'>
 					<div className='sm:w-full md:w-1/2 md:mx-3 overflow-hidden bg-gray mb-8 md:mb-2 flex items-center justify-center'>
 						<Image
@@ -108,10 +110,7 @@ export const Modal: React.FC<ModalProps> = ({
 					</div>
 					<div className='md:w-1/2 md:ml-4 items-start'>
 						{modalTexts.map((modalText) => (
-							<p
-								key={modalText}
-								className='mb-4 last:mb-0 text-left animate-fade-right animate-duration-[1600ms]'
-							>
+							<p key={modalText} className='mb-4 last:mb-0 text-left'>
 								{modalText}
 							</p>
 						))}
