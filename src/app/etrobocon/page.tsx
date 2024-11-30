@@ -63,9 +63,10 @@ const ETRobocon: React.FC = () => {
 						key={image.id}
 						src={image.src}
 						alt={image.alt}
-						layout='responsive'
-						width={700}
-						height={700}
+						style={{
+							width: '100%',
+							height: 'auto',
+						}}
 						className='shadow-lg'
 					/>
 				))}
