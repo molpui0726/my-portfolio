@@ -1,10 +1,10 @@
 import type React from 'react';
-import { SectionCard } from './components/molecules/card/SectionCard';
 import {
 	GithubLinkButton,
-	XLinkButton,
 	QiitaLinkButton,
+	XLinkButton,
 } from './components/atoms/button/SocialMediaLinkButton';
+import { SectionCard } from './components/molecules/card/SectionCard';
 
 const sectionCards = [
 	{

@@ -4,8 +4,8 @@ import type React from 'react';
 import { ProgressBar } from '../components/atoms/ProgressBar';
 import {
 	GithubLinkButton,
-	XLinkButton,
 	QiitaLinkButton,
+	XLinkButton,
 } from '../components/atoms/button/SocialMediaLinkButton';
 
 const About: React.FC = () => {
