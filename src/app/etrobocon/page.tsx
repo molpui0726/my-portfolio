@@ -63,6 +63,9 @@ const ETRobocon: React.FC = () => {
 						key={image.id}
 						src={image.src}
 						alt={image.alt}
+						width={500}
+						height={500}
+						sizes='100vw'
 						style={{
 							width: '100%',
 							height: 'auto',
