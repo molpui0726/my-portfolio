@@ -7,7 +7,7 @@ type ProductsDataType = {
 	src: string; // モーダル画面左に配置する画像の画像パス
 	alt: string; // モーダル内の画像が表示されないときに変わりに表示する文字列
 	workTitle: string; // 成果物のタイトル
-	techs?: string[]; // // カードホバー時に浮かび上がる技術スタック、3つまで表示
+	techs?: string[]; // カードホバー時に浮かび上がる技術スタック、3つまで表示
 	modalTexts: string[]; // モーダル画面での成果物を説明する文
 	githubUrl?: string; // 成果物から飛べる Github の URL リンク
 }[];
@@ -38,7 +38,7 @@ const productsData: ProductsDataType = [
 			'リアルコース上を機械に走らせて点数を競う走行部門と、設計書の出来を評価するモデル部門があります。',
 			'2023年は九州地区大会で総合およびモデル優勝、全国大会で総合6位の成績を収めました。',
 			'2024年はチームリーダーを務め、九州地区大会で総合準優勝およびモデル優勝、全国大会で総合5位の成績を収めました。',
-			'10人ほどで半年間開発を続け、コード量はテスト含めて9000行から10000行ほど。',
+			'10人ほどで半年間開発を続け、コード量はテスト含めて約10000行です。',
 		],
 		githubUrl: 'https://github.com/KatLab-MiyazakiUniv/etrobocon2024',
 	},
@@ -51,6 +51,8 @@ const productsData: ProductsDataType = [
 		modalTexts: [
 			'Webアプリケーション開発のアルバイトに1年半従事しています。',
 			'主にフロントを担当しており、現在は AWS, Google Cloud も利用。',
+			'React, Next.js を中心として、プロダクトをキャッチアップで開発中。',
+			'業務で得た知見は業務内だけでなく、研究での AWS 利用やハッカソンでの Web アプリ開発などで活かしています。',
 		],
 	},
 	{
@@ -74,7 +76,7 @@ const productsData: ProductsDataType = [
 		techs: ['Apache', 'Roundcube', 'Sympa'],
 		modalTexts: [
 			'研究室のサーバー移転に伴い、Webサーバー、メールサーバー、メーリングリストサーバーを構築しました。',
-			'OpenSSHやApacheの脆弱性対応など、脆弱性には随時対応中。卒業まで保守作業を続ける予定。',
+			'OpenSSHやApacheの脆弱性対応や、研究室OBの前サーバー内データの復旧など、随時対応中。卒業まで保守作業を続ける予定。',
 			'定期監査では一回で脆弱性ゼロの報告をいただきました。',
 		],
 	},
@@ -115,7 +117,7 @@ const productsData: ProductsDataType = [
 		modalTexts: [
 			'ポートフォリオサイト(本サイト)。現在も更新中。',
 			'Biome や Vercel の CI 、Storybook の導入など、勉強のために使いたかったので一部ツールやライブラリを利用。',
-			'私についてや開発にかかわったもの、成果物等をまとめている。',
+			'私についてや開発にかかわったもの、成果物等をまとめています。',
 		],
 		githubUrl: 'https://github.com/YKhm20020/my-portfolio',
 	},
