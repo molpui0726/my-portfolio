@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { expect, userEvent, within } from '@storybook/test';
 import { CommonButton } from './CommonButton';
 
-const meta = {
+const meta: Meta<typeof CommonButton> = {
 	title: 'components/atoms/button/CommonButton',
 	component: CommonButton,
 	parameters: {
@@ -12,7 +12,7 @@ const meta = {
 		},
 	},
 	decorators: [withActions],
-} satisfies Meta<typeof CommonButton>;
+};
 
 export default meta;
 

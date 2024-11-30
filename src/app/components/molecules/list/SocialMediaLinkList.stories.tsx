@@ -2,7 +2,7 @@ import { withActions } from '@storybook/addon-actions/decorator';
 import type { Meta, StoryObj } from '@storybook/react';
 import { SocialMediaLinkList } from './SocialMediaLinkList';
 
-const meta = {
+const meta: Meta<typeof SocialMediaLinkList> = {
 	title: 'components/molecules/list/SocialMediaLinkList',
 	component: SocialMediaLinkList,
 	parameters: {
@@ -12,7 +12,7 @@ const meta = {
 	},
 	decorators: [withActions],
 	tags: ['autodocs'],
-} satisfies Meta<typeof SocialMediaLinkList>;
+};
 
 export default meta;
 

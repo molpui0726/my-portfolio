@@ -2,7 +2,7 @@ import { withActions } from '@storybook/addon-actions/decorator';
 import type { Meta, StoryObj } from '@storybook/react';
 import { SectionCard } from './SectionCard';
 
-const meta = {
+const meta: Meta<typeof SectionCard> = {
 	title: 'components/molecules/card/SectionCard',
 	component: SectionCard,
 	parameters: {
@@ -11,7 +11,7 @@ const meta = {
 		},
 	},
 	decorators: [withActions],
-} satisfies Meta<typeof SectionCard>;
+};
 
 export default meta;
 

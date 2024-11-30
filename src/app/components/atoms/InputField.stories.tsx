@@ -3,11 +3,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, within } from '@storybook/test';
 import { InputField } from './InputField';
 
-const meta = {
+const meta: Meta<typeof InputField> = {
 	title: 'components/atoms/InputField',
 	component: InputField,
 	decorators: [withActions],
-} satisfies Meta<typeof InputField>;
+};
 
 export default meta;
 
