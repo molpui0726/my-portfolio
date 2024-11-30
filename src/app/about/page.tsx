@@ -1,6 +1,7 @@
 import { MediaObject } from '@/app/components/organisms/MediaObject';
 import Link from 'next/link';
 import type React from 'react';
+import { ProgressBar } from '../components/atoms/ProgressBar';
 import {
 	GithubLinkButton,
 	XLinkButton,
@@ -10,6 +11,7 @@ import {
 const About: React.FC = () => {
 	return (
 		<>
+			<ProgressBar />
 			<div className='flex flex-col items-center py-4'>
 				<h1 className='text-4xl font-bold text-center'>About</h1>
 				<p className='text-lg pt-4'>私を紹介するページ</p>

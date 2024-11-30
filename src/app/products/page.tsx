@@ -1,4 +1,5 @@
 import type React from 'react';
+import { ProgressBar } from '../components/atoms/ProgressBar';
 import { WorkCard } from '../components/molecules/card/WorkCard';
 
 type ProductsDataType = {
@@ -86,7 +87,7 @@ const productsData: ProductsDataType = [
 		modalTexts: [
 			'技育CAMPハッカソンにて、「祭」というテーマをオンラインフェスとして消化し、作成しました。',
 			'同じ趣味を持っている人が自己紹介や成果物を投稿し、交流できるというコンセプトのWebアプリです。',
-			'1週間の開発期間で、4人で開発を進める。フロント・バックでひとりずつ経験者・未経験者を割り振り、ペアプロ形式で進行。',
+			'1週間の開発期間で、4人で開発。フロント・バックでひとりずつ経験者・未経験者を割り振り、ペアプロ形式で進行。',
 			'フロントの経験者として開発を進め、コンポーネント全体の設計やカスタムフック、自己紹介・成果物の閲覧ページを担当しました。',
 		],
 		githubUrl: 'https://github.com/YKhm20020/Frontend-Festival-Booth',
@@ -98,10 +99,10 @@ const productsData: ProductsDataType = [
 		workTitle: 'Tacktail',
 		techs: ['Next.js', 'Golang', 'CSS modules'],
 		modalTexts: [
-			'LINEヤフー主催のハッカソン Open Hack U にて、カクテルのレシピを教えてくれるWebアプリを現在作成中。',
+			'LINEヤフー主催のハッカソン Open Hack U にて、カクテルのレシピを教えてくれるWebアプリを作成。',
 			'カクテルは敷居が高い印象があるものの、実は1杯200円弱で作れるものも。簡単なものから作れるストーリーモードや、自分が作成したカクテルの画像をカクテルレシピの画像として登録できるコレクション機能を実装。',
 			'現在も継続開発中で、オリジナルのカクテルレシピを投稿できる機能や、レシピ検索時にフィルタリングをかけられる機能を実装予定。',
-			'2週間の開発期間(ハッカソン中)で、3人で開発を進める。フロント・バック両方を担当しつつ、Auth.js を用いたバックエンドで生成したトークンを共有する認証機能、Supabase を用いたコレクション機能での画像アップロード機能、バックエンドのデプロイも担当しました。',
+			'2週間の開発期間(ハッカソン中)で、3人で開発。フロント・バック両方を担当しつつ、Auth.js を用いたバックエンドで生成したトークンを共有した認証機能、Supabase を用いたコレクション機能での画像アップロード機能、バックエンドのデプロイも担当しました。',
 		],
 		githubUrl: 'https://github.com/aridome222/Frontend-Tacktail',
 	},
@@ -112,8 +113,9 @@ const productsData: ProductsDataType = [
 		workTitle: 'ポートフォリオサイト',
 		techs: ['Next.js', 'Tailwindcss', 'Storybook'],
 		modalTexts: [
-			'ポートフォリオサイト。現在も更新中。',
-			'Biome や Vercel の CI 、Storybook の導入など、個人開発では不要なものも勉強のために使いたかったので利用。',
+			'ポートフォリオサイト(本サイト)。現在も更新中。',
+			'Biome や Vercel の CI 、Storybook の導入など、勉強のために使いたかったので一部ツールやライブラリを利用。',
+			'私についてや開発にかかわったもの、成果物等をまとめている。',
 		],
 		githubUrl: 'https://github.com/YKhm20020/my-portfolio',
 	},
@@ -126,6 +128,7 @@ const productsData: ProductsDataType = [
 			'2023年6月からおおよそ月1ペースで、Qiitaに記事を投稿。',
 			'アルバイトで解決までに難航した内容や、ETロボコンについて、ハッカソンで行った環境構築など、多岐に渡って投稿。',
 			'フロント分野やETロボコンや研究で使う C++, Python の内容を中心に投稿しています。',
+			'2024年11月末、50 Contributions を達成いたしました。',
 		],
 	},
 ];
@@ -133,6 +136,7 @@ const productsData: ProductsDataType = [
 const Products: React.FC = () => {
 	return (
 		<>
+			<ProgressBar />
 			<div className='flex flex-col py-4'>
 				<h1 className='text-4xl font-bold text-center'>Products</h1>
 				{descriptions.map((description) => (

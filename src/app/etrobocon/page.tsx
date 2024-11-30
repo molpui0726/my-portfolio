@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import type React from 'react';
 // import { PDFViewer } from '../components/atoms/PDFViewer';
+import { ProgressBar } from '../components/atoms/ProgressBar';
 import { MediaObject } from '../components/organisms/MediaObject';
 
 const imageInfo = [
@@ -15,6 +16,7 @@ const imageInfo = [
 const ETRobocon: React.FC = () => {
 	return (
 		<>
+			<ProgressBar />
 			<div className='flex flex-col items-center py-4'>
 				<h1 className='text-4xl font-bold text-center'>ETRobocon</h1>
 				<p className='text-lg pt-4'>
