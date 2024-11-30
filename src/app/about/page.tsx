@@ -1,6 +1,11 @@
 import { MediaObject } from '@/app/components/organisms/MediaObject';
 import Link from 'next/link';
 import type React from 'react';
+import {
+	GithubLinkButton,
+	QiitaLinkButton,
+	XLinkButton,
+} from '../components/atoms/button/SocialMediaLinkButton';
 
 const About: React.FC = () => {
 	return (
@@ -16,11 +21,11 @@ const About: React.FC = () => {
 				texts={[
 					'宮崎大学の大学院に在籍している木村優哉(きむら ゆうや)です。',
 					'プログラミングを専攻する学科に所属しており、研究やETロボコン、Webアプリケーション開発のアルバイトなどを行っております。',
-					'学生時代だからできる、ということを重視して活動を続けてきました。',
+					'「学生時代だからできる」を重要視し、様々なことに挑戦する意識を一番にもって活動を続けています。',
 				]}
 			/>
 
-			<h1 className='py-4 self-start text-3xl font-bold sm:text-4xl md:text-2xl lg:text-3xl'>
+			<h1 className='my-4 self-start text-3xl font-bold sm:text-4xl md:text-2xl lg:text-3xl'>
 				開発経験
 			</h1>
 			<p>
@@ -41,6 +46,18 @@ const About: React.FC = () => {
 				</Link>{' '}
 				ページをご覧ください。
 			</p>
+			<h1 className='mt-8 mb-4 self-start text-3xl font-bold sm:text-4xl md:text-2xl lg:text-3xl'>
+				ソーシャルメディア
+			</h1>
+			<p>
+				私が運用している Github, X (旧 Twitter),
+				Qiitaのリンクは以下からどうぞ。ボタンのアニメーションは結構頑張りました。
+			</p>
+			<div className='flex gap-2 my-6'>
+				<GithubLinkButton />
+				<XLinkButton />
+				<QiitaLinkButton />
+			</div>
 		</>
 	);
 };
