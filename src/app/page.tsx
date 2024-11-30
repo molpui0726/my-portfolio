@@ -1,9 +1,5 @@
 import type React from 'react';
-import {
-	GithubLinkButton,
-	QiitaLinkButton,
-	XLinkButton,
-} from './components/atoms/button/SocialMediaLinkButton';
+import { SocialMediaLinkList } from './components/molecules/List/SocialMediaLinkList';
 import { SectionCard } from './components/molecules/card/SectionCard';
 
 const sectionCards = [
@@ -50,11 +46,7 @@ const Home: React.FC = () => {
 						/>
 					))}
 				</div>
-				<div className='flex flex-col sm:flex-row sm:justify-center gap-2 my-6'>
-					<GithubLinkButton />
-					<XLinkButton />
-					<QiitaLinkButton />
-				</div>
+				<SocialMediaLinkList />
 			</div>
 		</div>
 	);

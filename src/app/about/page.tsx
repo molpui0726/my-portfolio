@@ -2,11 +2,7 @@ import { MediaObject } from '@/app/components/organisms/MediaObject';
 import Link from 'next/link';
 import type React from 'react';
 import { ProgressBar } from '../components/atoms/ProgressBar';
-import {
-	GithubLinkButton,
-	QiitaLinkButton,
-	XLinkButton,
-} from '../components/atoms/button/SocialMediaLinkButton';
+import { SocialMediaLinkList } from '../components/molecules/List/SocialMediaLinkList';
 
 const About: React.FC = () => {
 	return (
@@ -55,11 +51,7 @@ const About: React.FC = () => {
 				私が運用している Github, X (旧 Twitter),
 				Qiitaのリンクは以下からどうぞ。ボタンのアニメーションは結構頑張りました。
 			</p>
-			<div className='flex gap-2 my-6'>
-				<GithubLinkButton />
-				<XLinkButton />
-				<QiitaLinkButton />
-			</div>
+			<SocialMediaLinkList />
 		</>
 	);
 };
