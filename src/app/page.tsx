@@ -1,5 +1,10 @@
 import type React from 'react';
 import { SectionCard } from './components/molecules/card/SectionCard';
+import {
+	GithubLinkButton,
+	XLinkButton,
+	QiitaLinkButton,
+} from './components/atoms/button/SocialMediaLinkButton';
 
 const sectionCards = [
 	{
@@ -44,6 +49,11 @@ const Home: React.FC = () => {
 							linkHref={card.linkHref}
 						/>
 					))}
+				</div>
+				<div className='flex gap-2 my-6'>
+					<GithubLinkButton />
+					<XLinkButton />
+					<QiitaLinkButton />
 				</div>
 			</div>
 		</div>

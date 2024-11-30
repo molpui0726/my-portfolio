@@ -3,8 +3,8 @@ import Link from 'next/link';
 import type React from 'react';
 import {
 	GithubLinkButton,
-	QiitaLinkButton,
 	XLinkButton,
+	QiitaLinkButton,
 } from '../components/atoms/button/SocialMediaLinkButton';
 
 const About: React.FC = () => {
