@@ -50,7 +50,7 @@ const Home: React.FC = () => {
 						/>
 					))}
 				</div>
-				<div className='flex gap-2 my-6'>
+				<div className='flex flex-col sm:flex-row sm:justify-center gap-2 my-6'>
 					<GithubLinkButton />
 					<XLinkButton />
 					<QiitaLinkButton />

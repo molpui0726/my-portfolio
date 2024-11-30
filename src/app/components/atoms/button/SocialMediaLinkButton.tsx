@@ -35,7 +35,7 @@ export const GithubLinkButton: React.FC = () => {
 			{/* アイコン */}
 			<FaGithub size={24} className='text-white' />
 			{/* テキストのラッパー */}
-			<div className='relative overflow-hidden px-6 flex items-center justify-center'>
+			<div className='relative overflow-hidden px-7 flex items-center justify-center'>
 				{/* 初期表示のテキスト */}
 				<p className='transition-transform duration-300 text-white font-bold group-hover:-translate-y-full whitespace-nowrap'>
 					Github
@@ -58,7 +58,7 @@ export const QiitaLinkButton: React.FC = () => {
 			{/* アイコン */}
 			<SiQiita size={24} className='text-white' />
 			{/* テキストのラッパー */}
-			<div className='relative overflow-hidden px-8 flex items-center justify-center'>
+			<div className='relative overflow-hidden px-9 flex items-center justify-center'>
 				{/* 初期表示のテキスト */}
 				<p className='transition-transform duration-300 text-white font-bold group-hover:-translate-y-full whitespace-nowrap'>
 					Qiita
