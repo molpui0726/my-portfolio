@@ -25,8 +25,8 @@ const sectionCards = [
 
 const Home: React.FC = () => {
 	return (
-		<div className='flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-			<div className='text-center py-8'>
+		<div className='flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-2'>
+			<div className='text-center'>
 				<h1 className='text-5xl font-bold mb-4 opacity-0 translate-y-5 animate-fadeIn'>
 					Welcome to My Portfolio
 				</h1>

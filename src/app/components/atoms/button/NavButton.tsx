@@ -16,9 +16,9 @@ export const NavButton: React.FC<NavButtonProps> = ({ href, children }: NavButto
 	return (
 		<Link
 			href={href}
-			className={`bg-neutral-950 text-stone-300 text-base px-2 py-1 rounded-full text-transition duration-700 ease-in-out
-                        hover:bg-white hover:text-black hover:text-lg link-hover
-                        ${isActive ? '!bg-white text-stone-600 text-lg' : ''}`}
+			className={`bg-neutral-950 text-stone-300 text-base px-2 py-2 rounded-full text-transition duration-500 ease-in-out
+                        hover:bg-white hover:text-black link-hover
+                        ${isActive ? '!bg-white text-stone-600' : ''}`}
 		>
 			{children}
 		</Link>
