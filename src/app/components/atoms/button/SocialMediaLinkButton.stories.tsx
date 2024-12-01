@@ -12,7 +12,6 @@ const meta: Meta<typeof GithubButton> = {
 		},
 	},
 	decorators: [withActions],
-	tags: ['autodocs'],
 };
 
 export default meta;

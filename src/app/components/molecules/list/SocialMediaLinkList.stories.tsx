@@ -11,7 +11,6 @@ const meta: Meta<typeof SocialMediaLinkList> = {
 		},
 	},
 	decorators: [withActions],
-	tags: ['autodocs'],
 };
 
 export default meta;
