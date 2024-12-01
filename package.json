@@ -28,7 +28,7 @@
     "worker-loader": "^3.0.8"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.0",
+    "@biomejs/biome": "1.9.4",
     "@chromatic-com/storybook": "^3.2.2",
     "@storybook/addon-essentials": "^8.4.6",
     "@storybook/addon-interactions": "^8.4.6",
@@ -39,7 +39,7 @@
     "@storybook/react": "^8.4.6",
     "@storybook/test": "^8.4.6",
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "^20",
+    "@types/node": "^20.17.9",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.16",
