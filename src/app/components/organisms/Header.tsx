@@ -1,5 +1,5 @@
-import NavButton from '@/components/atoms/button/NavButton';
 import type React from 'react';
+import { NavButton } from '../atoms/button/NavButton';
 
 const Header: React.FC = () => {
 	return (

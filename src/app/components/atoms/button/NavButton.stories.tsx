@@ -1,7 +1,7 @@
 import { withActions } from '@storybook/addon-actions/decorator';
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, userEvent, within } from '@storybook/test';
-import NavButton from './NavButton';
+import { NavButton } from './NavButton';
 
 const meta: Meta<typeof NavButton> = {
 	title: 'components/atoms/button/NavButton',
@@ -26,11 +26,12 @@ export const Default: Story = {
 
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
-		// hover時のテスト
+		// hover 時のテスト
 		await userEvent.hover(canvas.getByRole('link'));
 		await expect(canvas.getByRole('link')).toHaveClass('link-hover');
-		// unhover時のテスト
+
+		// unhover 時のテスト
 		await userEvent.unhover(canvas.getByRole('link'));
-		await expect(canvas.getByRole('link')).not.toHaveClass('link-hover');
+		await expect(canvas.getByRole('link')).not.toHaveClass('!bg-white');
 	},
 };

@@ -9,7 +9,7 @@ type NavButtonProps = {
 	children: React.ReactNode;
 };
 
-const NavButton: React.FC<NavButtonProps> = ({ href, children }: NavButtonProps) => {
+export const NavButton: React.FC<NavButtonProps> = ({ href, children }: NavButtonProps) => {
 	const pathname = usePathname();
 	const isActive = pathname === href;
 
@@ -24,5 +24,3 @@ const NavButton: React.FC<NavButtonProps> = ({ href, children }: NavButtonProps)
 		</Link>
 	);
 };
-
-export default NavButton;
