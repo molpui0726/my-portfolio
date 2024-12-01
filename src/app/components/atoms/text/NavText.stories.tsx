@@ -2,7 +2,7 @@ import { withActions } from '@storybook/addon-actions/decorator';
 import type { Meta, StoryObj } from '@storybook/react';
 import { NavText } from './NavText';
 
-const meta: Meta = {
+const meta: Meta<typeof NavText> = {
 	title: 'components/atoms/text/NavText',
 	component: NavText,
 	parameters: {
@@ -11,7 +11,7 @@ const meta: Meta = {
 		},
 	},
 	decorators: [withActions],
-} satisfies Meta<typeof NavText>;
+};
 
 export default meta;
 

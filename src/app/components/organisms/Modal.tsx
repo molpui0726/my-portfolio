@@ -1,15 +1,18 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import type React from 'react';
 import { useCallback, useEffect } from 'react';
+import { FaGithub } from 'react-icons/fa';
 
 type ModalProps = {
 	isOpen: boolean; // モーダルを開くかどうかを監視する状態変数 true: 開く
 	src: string; // 左に配置する画像の画像パス
 	alt: string; // 画像が表示されないときに変わりに表示するテキスト
 	modalTitle: string; // 右上部に配置する題
-	modalTexts: string[]; // 題の下に配置するテキスト。改行ごとに要素を分割する。
+	modalTexts: string[]; // 題の下に配置するテキスト。改行ごとに要素を分割する
+	githubUrl?: string; // 成果物から飛べる Github の URL リンク
 	onClose: () => void; // モーダルを閉じる関数
 };
 
@@ -19,8 +22,9 @@ export const Modal: React.FC<ModalProps> = ({
 	alt,
 	modalTitle,
 	modalTexts,
+	githubUrl,
 	onClose,
-}) => {
+}: ModalProps) => {
 	// キー入力時の処理
 	const handleKeyDown = useCallback(
 		(event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -58,10 +62,7 @@ export const Modal: React.FC<ModalProps> = ({
 	}
 
 	return (
-		<div
-			className='fixed inset-0 z-50 flex items-center justify-center
-        px-4 sm:px-6 lg:px-16 py-12'
-		>
+		<div className='fixed inset-0 z-50 flex items-center justify-center px-4 sm:px-6 lg:px-16 py-12'>
 			<div
 				className='fixed inset-0 bg-black bg-opacity-50'
 				onClick={onClose}
@@ -94,7 +95,9 @@ export const Modal: React.FC<ModalProps> = ({
 						</svg>
 					</button>
 				</div>
-				<h1 className='text-4xl font-bold mb-8 md:tracking-wide'>{modalTitle}</h1>
+				<h1 className='text-4xl font-bold mb-8 md:tracking-wide animate-fade-right animate-duration-[1600ms]'>
+					{modalTitle}
+				</h1>
 				<div className='flex flex-col md:flex-row md:gap-4'>
 					<div className='sm:w-full md:w-1/2 md:mx-3 overflow-hidden bg-gray mb-8 md:mb-2 flex items-center justify-center'>
 						<Image
@@ -105,15 +108,23 @@ export const Modal: React.FC<ModalProps> = ({
 							alt={alt}
 						/>
 					</div>
-					<div className='md:w-1/2 items-start'>
+					<div className='md:w-1/2 md:ml-4 items-start'>
 						{modalTexts.map((modalText) => (
-							<p
-								key={modalText}
-								className='md:ml-8 text-left animate-fade-right animate-duration-[1600ms]'
-							>
+							<p key={modalText} className='mb-4 last:mb-0 text-left'>
 								{modalText}
 							</p>
 						))}
+						{githubUrl && (
+							<div className='flex justify-end mt-auto'>
+								<Link
+									href={githubUrl}
+									className='bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded inline-flex items-center transition-colors duration-200'
+								>
+									<FaGithub className='mr-2' size={23} />
+									GitHub
+								</Link>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>

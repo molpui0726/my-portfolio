@@ -9,11 +9,19 @@ type WorkCardProps = {
 	src: string; // カードとモーダルに表示する画像パス
 	alt?: string; // 画像が表示されないときに代わりに表示する文字
 	workTitle: string; // 成果物のタイトル
-	techs: string[]; // カードホバー時に浮かび上がる技術スタック
+	techs: string[]; // カードホバー時に浮かび上がる技術スタック、3つまで表示
 	modalTexts: string[]; // モーダル画面の説明文。改行ごとに要素を分割する
+	githubUrl?: string; // 成果物のGithubリンク
 };
 
-export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, modalTexts }) => {
+export const WorkCard: React.FC<WorkCardProps> = ({
+	src,
+	alt,
+	workTitle,
+	techs,
+	modalTexts,
+	githubUrl,
+}: WorkCardProps) => {
 	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
 	const onOpenModal = (): void => {
@@ -27,7 +35,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, 
 	return (
 		<>
 			<div
-				className='relative group flex flex-col shadow-2xl rounded-xl overflow-hidden w-60 md:w-48 lg:w-56 cursor-pointer transition-all duration-300 ease-in-out
+				className='relative group flex flex-col shadow-2xl rounded-xl overflow-hidden w-72 sm:w-60 cursor-pointer transition-all duration-300 ease-in-out
                 hover:scale-105'
 				onClick={onOpenModal}
 				onKeyDown={(e) => {
@@ -37,7 +45,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, 
 				}}
 			>
 				<Image
-					className='object-cover object-center w-60 md:w-48 lg:w-56 h-60'
+					className='object-cover object-center w-72 sm:w-60 h-60'
 					src={src}
 					alt={alt ?? workTitle}
 					width={300}
@@ -63,6 +71,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({ src, alt, workTitle, techs, 
 				alt={alt ?? workTitle}
 				modalTitle={workTitle}
 				modalTexts={modalTexts}
+				githubUrl={githubUrl}
 				onClose={onCloseModal}
 			/>
 		</>

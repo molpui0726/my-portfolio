@@ -2,7 +2,7 @@ import { withActions } from '@storybook/addon-actions/decorator';
 import type { Meta, StoryObj } from '@storybook/react';
 import { WorkCard } from './WorkCard';
 
-const meta = {
+const meta: Meta<typeof WorkCard> = {
 	title: 'components/molecules/card/WordCard',
 	component: WorkCard,
 	parameters: {
@@ -11,7 +11,7 @@ const meta = {
 		},
 	},
 	decorators: [withActions],
-} satisfies Meta<typeof WorkCard>;
+};
 
 export default meta;
 
