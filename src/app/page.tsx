@@ -1,6 +1,6 @@
 import type React from 'react';
-import { SocialMediaLinkList } from './components/molecules/List/SocialMediaLinkList';
 import { SectionCard } from './components/molecules/card/SectionCard';
+import { SocialMediaLinkList } from './components/molecules/list/SocialMediaLinkList';
 
 const sectionCards = [
 	{
