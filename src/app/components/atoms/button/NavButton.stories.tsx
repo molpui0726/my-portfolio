@@ -24,6 +24,12 @@ export const Default: Story = {
 		children: 'NavButton',
 	},
 
+	parameters: {
+		backgrounds: {
+			default: 'Dark',
+		},
+	},
+
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 		// hover 時のテスト
