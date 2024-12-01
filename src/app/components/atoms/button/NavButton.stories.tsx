@@ -8,7 +8,7 @@ const meta: Meta<typeof NavButton> = {
 	component: NavButton,
 	parameters: {
 		actions: {
-			handles: ['mouseover', 'click .btn'],
+			handles: ['mouseover', 'click'],
 		},
 	},
 	decorators: [withActions],
