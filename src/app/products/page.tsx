@@ -110,14 +110,14 @@ const productsData: ProductsDataType = [
 	},
 	{
 		id: 6,
-		src: '/images/portfolio.png',
+		src: '/images/products/portfolio.png',
 		alt: 'ポートフォリオサイトのメインページ',
 		workTitle: 'ポートフォリオサイト',
 		techs: ['Next.js', 'Tailwindcss', 'Storybook'],
 		modalTexts: [
 			'ポートフォリオサイト(本サイト)。現在も更新中。',
 			'Biome や Vercel の CI 、Storybook の導入など、勉強のために使いたかったので一部ツールやライブラリを利用。',
-			'私についてや開発にかかわったもの、成果物等をまとめています。',
+			'私についてや開発にかかわったもの、成果物等をまとめています。初期ページおよび About ページに配置しているソーシャルメディアリンクのボタンと、Products ページに配置しているカードコンポーネントのアニメーションは気に入っています。',
 		],
 		githubUrl: 'https://github.com/YKhm20020/my-portfolio',
 	},
