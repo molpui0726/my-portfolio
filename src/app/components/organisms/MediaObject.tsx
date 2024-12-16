@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import type React from 'react';
+import { Suspense } from 'react';
+import { LoadingSpinner } from '../atoms/LoadingSpinner';
 
 type MediaObjectProps = {
 	src: string; // 左に配置する画像の画像パス
@@ -19,13 +21,15 @@ export const MediaObject: React.FC<MediaObjectProps> = ({
 			<div className='mx-auto'>
 				<div className='grid gap-8 md:grid-cols-2 lg:gap-12 items-start'>
 					<div className='h-128 overflow-hidden bg-gray'>
-						<Image
-							className='rounded-lg object-cover object-center'
-							src={src}
-							width={600}
-							height={1000}
-							alt={alt}
-						/>
+						<Suspense fallback={<LoadingSpinner />}>
+							<Image
+								className='rounded-lg object-cover object-center'
+								src={src}
+								width={600}
+								height={1000}
+								alt={alt}
+							/>
+						</Suspense>
 					</div>
 					<div className='flex flex-col'>
 						<h1 className='pt-2 pb-4 md:py-2 text-center sm:text-4xl md:text-2xl lg:text-3xl text-3xl font-bold animate-fade-right animate-duration-[1600ms]'>
