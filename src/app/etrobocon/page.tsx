@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import type React from 'react';
 // import { PDFViewer } from '../components/atoms/PDFViewer';
+import { ImageWithPulseLoading } from '../components/atoms/ImageWithPulseLoading';
 import { ProgressBar } from '../components/atoms/ProgressBar';
 import { MediaObject } from '../components/organisms/MediaObject';
 
@@ -59,7 +59,7 @@ const ETRobocon: React.FC = () => {
 				</h1>
 				{/* <PDFViewer filePath='/ADV_093_KatLab.pdf' /> */}
 				{imageInfo.map((image) => (
-					<Image
+					<ImageWithPulseLoading
 						key={image.id}
 						src={image.src}
 						alt={image.alt}
