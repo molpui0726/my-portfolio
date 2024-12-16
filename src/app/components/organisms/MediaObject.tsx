@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import type React from 'react';
-import { ImageWithPulseLoading } from '../atoms/ImageWithPulseLoading';
 
 type MediaObjectProps = {
 	src: string; // 左に配置する画像の画像パス
@@ -19,7 +19,7 @@ export const MediaObject: React.FC<MediaObjectProps> = ({
 			<div className='mx-auto'>
 				<div className='grid gap-8 md:grid-cols-2 lg:gap-12 items-start'>
 					<div className='h-128 overflow-hidden bg-gray'>
-						<ImageWithPulseLoading
+						<Image
 							className='rounded-lg object-cover object-center'
 							src={src}
 							width={600}
