@@ -1,8 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import type React from 'react';
-import Image from 'next/image';
 
 interface ImageWithPulseLoadingProps {
 	src: string;
