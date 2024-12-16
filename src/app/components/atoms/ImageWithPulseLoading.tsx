@@ -9,14 +9,18 @@ interface ImageWithPulseLoadingProps {
 	alt: string;
 	width: number;
 	height: number;
+	sizes?: string;
+	style?: React.CSSProperties | undefined;
 	className?: string;
 }
 
 export const ImageWithPulseLoading: React.FC<ImageWithPulseLoadingProps> = ({
 	src,
 	alt,
+	sizes,
 	width,
 	height,
+	style,
 }) => {
 	const [isLoading, setIsLoading] = useState(true);
 
@@ -26,9 +30,9 @@ export const ImageWithPulseLoading: React.FC<ImageWithPulseLoadingProps> = ({
 			alt={alt}
 			width={width}
 			height={height}
-			className={`transition-opacity duration-300 rounded-lg ${
-				isLoading ? 'opacity-0 bg-gray-200 animate-pulse' : 'opacity-100'
-			}`}
+			sizes={sizes}
+			style={style}
+			className={`rounded-lg ${isLoading ? 'bg-gray-200 animate-pulse object-cover object-center' : ''}`}
 			onLoadingComplete={() => setIsLoading(false)}
 		/>
 	);
