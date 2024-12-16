@@ -7,7 +7,11 @@ type SectionCardProps = {
 	linkHref: string; // 下部に配置するテキストから遷移する先のページのパス
 };
 
-export const SectionCard: React.FC<SectionCardProps> = ({ title, description, linkHref }) => {
+export const SectionCard: React.FC<SectionCardProps> = ({
+	title,
+	description,
+	linkHref,
+}: SectionCardProps) => {
 	return (
 		<div className='bg-gray-100 p-6 flex flex-col rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1'>
 			<h2 className='text-2xl font-semibold mb-4'>{title}</h2>
