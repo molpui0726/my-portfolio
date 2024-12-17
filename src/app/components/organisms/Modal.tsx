@@ -68,7 +68,7 @@ export const Modal: React.FC<ModalProps> = ({
 				onClick={onClose}
 				onKeyDown={handleKeyDown}
 			/>
-			<div className='bg-white rounded-md p-5 flex flex-col items-center justify-center z-10 max-w-screen-lg max-h-screen'>
+			<div className='bg-white rounded-md p-5 flex flex-col items-center justify-center z-10 max-w-screen-lg max-h-[calc(100vh-2rem)] sm:max-h-[calc(100vh-10rem)]'>
 				<div className='relative mb-2 w-full'>
 					<button
 						type='button'
@@ -101,7 +101,7 @@ export const Modal: React.FC<ModalProps> = ({
 				<div className='flex flex-col md:flex-row md:gap-4'>
 					<div className='sm:w-full md:w-1/2 md:mx-3 overflow-hidden bg-gray mb-8 md:mb-2 flex items-center justify-center'>
 						<Image
-							className='rounded-lg max-h-96'
+							className='rounded-lg max-h-40 sm:max-h-48 md:max-h-96 object-scale-down'
 							src={src}
 							width={400}
 							height={400}
@@ -109,11 +109,13 @@ export const Modal: React.FC<ModalProps> = ({
 						/>
 					</div>
 					<div className='md:w-1/2 md:ml-4 items-start'>
-						{modalTexts.map((modalText) => (
-							<p key={modalText} className='mb-4 last:mb-0 text-left'>
-								{modalText}
-							</p>
-						))}
+						<div className='space-y-2 mb-4 max-h-28 sm:max-h-24 md:max-h-80 overflow-y-auto'>
+							{modalTexts.map((modalText) => (
+								<p key={modalText} className='mb-4 last:mb-0 text-left'>
+									{modalText}
+								</p>
+							))}
+						</div>
 						{githubUrl && (
 							<div className='flex justify-end mt-auto'>
 								<Link
