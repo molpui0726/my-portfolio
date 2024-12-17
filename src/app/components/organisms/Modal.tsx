@@ -101,7 +101,7 @@ export const Modal: React.FC<ModalProps> = ({
 				<div className='flex flex-col md:flex-row md:gap-4'>
 					<div className='sm:w-full md:w-1/2 md:mx-3 overflow-hidden bg-gray mb-8 md:mb-2 flex items-center justify-center'>
 						<Image
-							className='rounded-lg max-h-96'
+							className='rounded-lg max-h-40 sm:max-h-48 md:max-h-96 object-scale-down'
 							src={src}
 							width={400}
 							height={400}
