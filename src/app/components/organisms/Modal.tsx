@@ -109,11 +109,13 @@ export const Modal: React.FC<ModalProps> = ({
 						/>
 					</div>
 					<div className='md:w-1/2 md:ml-4 items-start'>
-						{modalTexts.map((modalText) => (
-							<p key={modalText} className='mb-4 last:mb-0 text-left'>
-								{modalText}
-							</p>
-						))}
+						<div className='space-y-2 mb-4 max-h-28 sm:max-h-24 md:max-h-80 overflow-y-auto'>
+							{modalTexts.map((modalText) => (
+								<p key={modalText} className='mb-4 last:mb-0 text-left'>
+									{modalText}
+								</p>
+							))}
+						</div>
 						{githubUrl && (
 							<div className='flex justify-end mt-auto'>
 								<Link
