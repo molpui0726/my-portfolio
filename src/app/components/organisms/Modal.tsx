@@ -68,7 +68,7 @@ export const Modal: React.FC<ModalProps> = ({
 				onClick={onClose}
 				onKeyDown={handleKeyDown}
 			/>
-			<div className='bg-white rounded-md p-5 flex flex-col items-center justify-center z-10 max-w-screen-lg max-h-screen'>
+			<div className='bg-white rounded-md p-5 flex flex-col items-center justify-center z-10 max-w-screen-lg max-h-[calc(100vh-2rem)] sm:max-h-[calc(100vh-10rem)]'>
 				<div className='relative mb-2 w-full'>
 					<button
 						type='button'
