@@ -48,6 +48,11 @@ const nextConfig = {
             new RsdoctorWebpackPlugin({
                 // plugin options
                 features: ['bundle', 'plugins'],
+                linter: {
+                    rules: {
+                        'ecma-version-check': 'off',
+                    }
+                }
                 }),
             );
 
