@@ -2,7 +2,6 @@ const { plugin } = require('postcss')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    swcMinify: true,
     webpack: (config) => {
         const fileLoaderRule = config.module.rules.find((rule) =>
             rule.test?.test?.('.svg'),
