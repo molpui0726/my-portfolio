@@ -1,9 +1,10 @@
 const { plugin } = require('postcss')
+const { RsdoctorWebpackPlugin } = require('@rsdoctor/webpack-plugin');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     swcMinify: true,
-    webpack: (config) => {
+    webpack: (config, { isServer }) => {
         const fileLoaderRule = config.module.rules.find((rule) =>
             rule.test?.test?.('.svg'),
         )
@@ -41,6 +42,14 @@ const nextConfig = {
             test: /\.node/,
             use: "raw-loader",
         });
+
+
+        config.plugins.push(
+            new RsdoctorWebpackPlugin({
+                // plugin options
+                features: ['bundle', 'plugins'],
+                }),
+            );
 
         return config
     },
