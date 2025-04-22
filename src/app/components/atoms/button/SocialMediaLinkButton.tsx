@@ -6,7 +6,7 @@ import { SiQiita } from 'react-icons/si';
 export const XLinkButton: React.FC = () => {
 	return (
 		<Link
-			href='https://x.com/Hogeta_KL'
+			href='https://x.com/molpui0726'
 			className='group bg-neutral-950 py-2 px-4 gap-2 mx-auto inline-flex items-center justify-center rounded-md'
 		>
 			{/* アイコン */}
@@ -19,7 +19,7 @@ export const XLinkButton: React.FC = () => {
 				</p>
 				{/* ホバー時に表示するテキスト */}
 				<p className='absolute transition-transform duration-300 translate-y-full text-white group-hover:translate-y-0 whitespace-nowrap'>
-					@Hogeta_KL
+					@molpui0726
 				</p>
 			</div>
 		</Link>
@@ -29,7 +29,7 @@ export const XLinkButton: React.FC = () => {
 export const GithubLinkButton: React.FC = () => {
 	return (
 		<Link
-			href='https://github.com/YKhm20020'
+			href='https://github.com/molpui0726'
 			className='group bg-neutral-950 py-2 px-4 gap-2 mx-auto inline-flex items-center justify-center rounded-md'
 		>
 			{/* アイコン */}
@@ -42,7 +42,7 @@ export const GithubLinkButton: React.FC = () => {
 				</p>
 				{/* ホバー時に表示するテキスト */}
 				<p className='absolute transition-transform duration-300 translate-y-full text-white group-hover:translate-y-0 whitespace-nowrap'>
-					YKhm20020
+					molpui0726
 				</p>
 			</div>
 		</Link>
@@ -52,7 +52,7 @@ export const GithubLinkButton: React.FC = () => {
 export const QiitaLinkButton: React.FC = () => {
 	return (
 		<Link
-			href='https://qiita.com/hogeta_KL'
+			href='https://qiita.com/molpui0726'
 			className='group bg-neutral-950 py-2 px-4 gap-2 mx-auto inline-flex items-center justify-center rounded-md'
 		>
 			{/* アイコン */}
@@ -65,7 +65,7 @@ export const QiitaLinkButton: React.FC = () => {
 				</p>
 				{/* ホバー時に表示するテキスト */}
 				<p className='absolute transition-transform duration-300 translate-y-full text-white group-hover:translate-y-0 whitespace-nowrap'>
-					@hogeta_KL
+					@molpui0726
 				</p>
 			</div>
 		</Link>
