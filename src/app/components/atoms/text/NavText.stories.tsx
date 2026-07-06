@@ -1,5 +1,5 @@
-import { withActions } from '@storybook/addon-actions/decorator';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/nextjs';
+import { withActions } from 'storybook/actions/decorator';
 import { NavText } from './NavText';
 
 const meta: Meta<typeof NavText> = {

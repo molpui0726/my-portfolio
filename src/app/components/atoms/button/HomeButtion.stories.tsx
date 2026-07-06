@@ -1,6 +1,6 @@
-import { withActions } from '@storybook/addon-actions/decorator';
-import type { Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import type { Meta, StoryObj } from '@storybook/nextjs';
+import { withActions } from 'storybook/actions/decorator';
+import { expect, userEvent, within } from 'storybook/test';
 import { HomeButton } from './HomeButton';
 
 const meta: Meta<typeof HomeButton> = {
@@ -20,12 +20,6 @@ type Story = StoryObj<typeof HomeButton>;
 
 // href 属性をもたない場合のストーリー
 export const Default: Story = {
-	parameters: {
-		backgrounds: {
-			default: 'Dark',
-		},
-	},
-
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 		const link = canvas.getByRole('link');
@@ -35,5 +29,11 @@ export const Default: Story = {
 
 		// リンククリック
 		await userEvent.click(link);
+	},
+
+	globals: {
+		backgrounds: {
+			value: 'dark',
+		},
 	},
 };

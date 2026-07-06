@@ -1,6 +1,6 @@
-import { withActions } from '@storybook/addon-actions/decorator';
-import type { Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import type { Meta, StoryObj } from '@storybook/nextjs';
+import { withActions } from 'storybook/actions/decorator';
+import { expect, userEvent, within } from 'storybook/test';
 import { NavButton } from './NavButton';
 
 const meta: Meta<typeof NavButton> = {
@@ -24,12 +24,6 @@ export const Default: Story = {
 		children: 'NavButton',
 	},
 
-	parameters: {
-		backgrounds: {
-			default: 'Dark',
-		},
-	},
-
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 		// hover 時のテスト
@@ -39,5 +33,11 @@ export const Default: Story = {
 		// unhover 時のテスト
 		await userEvent.unhover(canvas.getByRole('link'));
 		await expect(canvas.getByRole('link')).not.toHaveClass('!bg-white');
+	},
+
+	globals: {
+		backgrounds: {
+			value: 'dark',
+		},
 	},
 };

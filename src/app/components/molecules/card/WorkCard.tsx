@@ -1,9 +1,9 @@
 'use client';
 
-import { Modal } from '@/app/components/organisms/Modal';
 import Image from 'next/image';
 import type React from 'react';
 import { useState } from 'react';
+import { Modal } from '@/app/components/organisms/Modal';
 
 type WorkCardProps = {
 	src: string; // カードとモーダルに表示する画像パス
@@ -34,15 +34,11 @@ export const WorkCard: React.FC<WorkCardProps> = ({
 
 	return (
 		<>
-			<div
+			<button
+				type='button'
 				className='relative group flex flex-col shadow-2xl rounded-xl overflow-hidden w-72 sm:w-60 cursor-pointer transition-all duration-300 ease-in-out
-                hover:scale-105'
+                hover:scale-105 text-left'
 				onClick={onOpenModal}
-				onKeyDown={(e) => {
-					if (e.key === 'Enter') {
-						onOpenModal();
-					}
-				}}
 			>
 				<Image
 					className='object-cover object-center w-72 sm:w-60 h-60'
@@ -64,7 +60,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({
 						)}
 					</div>
 				</div>
-			</div>
+			</button>
 			<Modal
 				isOpen={isModalOpen}
 				src={src}

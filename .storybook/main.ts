@@ -1,14 +1,16 @@
+// This file has been automatically migrated to valid ESM format by Storybook.
+import { createRequire } from "node:module";
 import path from "path";
 import type { StorybookConfig } from "@storybook/nextjs";
+
+const require = createRequire(import.meta.url);
 
 const config: StorybookConfig = {
     stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)"],
 
     addons: [
         "@storybook/addon-links",
-        "@storybook/addon-essentials",
         "@storybook/addon-onboarding",
-        "@storybook/addon-interactions",
         "@storybook/addon-themes",
         {
             name: "@storybook/addon-styling-webpack",
@@ -35,7 +37,8 @@ const config: StorybookConfig = {
                 ],
             },
         },
-        "@chromatic-com/storybook"
+        "@chromatic-com/storybook",
+        "@storybook/addon-docs"
     ],
 
     framework: {
