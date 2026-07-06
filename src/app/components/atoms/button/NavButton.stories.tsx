@@ -1,5 +1,5 @@
-import { withActions } from 'storybook/actions/decorator';
 import type { Meta, StoryObj } from '@storybook/nextjs';
+import { withActions } from 'storybook/actions/decorator';
 import { expect, userEvent, within } from 'storybook/test';
 import { NavButton } from './NavButton';
 
@@ -36,8 +36,8 @@ export const Default: Story = {
 	},
 
 	globals: {
-        backgrounds: {
-            value: "dark"
-        }
-    },
+		backgrounds: {
+			value: 'dark',
+		},
+	},
 };

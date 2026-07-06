@@ -1,6 +1,6 @@
-import { MediaObject } from '@/app/components/organisms/MediaObject';
 import Link from 'next/link';
 import type React from 'react';
+import { MediaObject } from '@/app/components/organisms/MediaObject';
 import { ProgressBar } from '../components/atoms/ProgressBar';
 import { SocialMediaLinkList } from '../components/molecules/list/SocialMediaLinkList';
 

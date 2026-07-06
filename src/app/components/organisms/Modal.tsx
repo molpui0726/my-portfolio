@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type React from 'react';
-import { useCallback, useEffect } from 'react';
+import { useEffect } from 'react';
 import { FaGithub } from 'react-icons/fa';
 
 type ModalProps = {
@@ -25,16 +25,6 @@ export const Modal: React.FC<ModalProps> = ({
 	githubUrl,
 	onClose,
 }: ModalProps) => {
-	// キー入力時の処理
-	const handleKeyDown = useCallback(
-		(event: React.KeyboardEvent<HTMLDivElement>) => {
-			if (event.key === 'Escape') {
-				onClose();
-			}
-		},
-		[onClose],
-	);
-
 	useEffect(() => {
 		// Escapeキー入力時の処理
 		const handleEscapeKey = (event: KeyboardEvent) => {
@@ -64,9 +54,9 @@ export const Modal: React.FC<ModalProps> = ({
 	return (
 		<div className='fixed inset-0 z-50 flex items-center justify-center px-4 sm:px-6 lg:px-16 py-12'>
 			<div
+				aria-hidden='true'
 				className='fixed inset-0 bg-black bg-opacity-50'
 				onClick={onClose}
-				onKeyDown={handleKeyDown}
 			/>
 			<div className='bg-white rounded-md p-5 flex flex-col items-center justify-center z-10 max-w-screen-lg max-h-[calc(100vh-2rem)] sm:max-h-[calc(100vh-10rem)]'>
 				<div className='relative mb-2 w-full'>

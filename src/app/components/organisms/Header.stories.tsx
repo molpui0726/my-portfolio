@@ -1,5 +1,5 @@
-import * as NavButtonStories from '@/components/atoms/button/NavButton.stories';
 import type { Meta, StoryObj } from '@storybook/nextjs';
+import * as NavButtonStories from '@/components/atoms/button/NavButton.stories';
 import Header from './Header';
 
 const meta = {
