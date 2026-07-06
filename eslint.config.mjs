@@ -1,24 +1,12 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-});
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import storybook from 'eslint-plugin-storybook';
 
 const eslintConfig = [
-    {
-        ignores: [
-            ".next/**",
-            "node_modules/**",
-            "storybook-static/**",
-            "out/**",
-        ],
-    },
-    ...compat.extends("next/core-web-vitals", "plugin:storybook/recommended"),
+	{
+		ignores: ['.next/**', 'node_modules/**', 'storybook-static/**', 'out/**'],
+	},
+	...nextVitals,
+	...storybook.configs['flat/recommended'],
 ];
 
 export default eslintConfig;
