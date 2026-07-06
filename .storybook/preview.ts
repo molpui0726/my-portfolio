@@ -1,14 +1,13 @@
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/nextjs";
 import "tailwindcss/tailwind.css";
 
 const preview: Preview = {
     parameters: {
         backgrounds: {
-            values: [
-                { name: 'Dark', value:'#000000' },
-                { name: 'Light', value: '#FFFFFF' },
-            ],
-            default: 'Light',
+            options: {
+                dark: { name: 'Dark', value:'#000000' },
+                light: { name: 'Light', value: '#FFFFFF' }
+            }
         },
         controls: {
             matchers: {
@@ -18,7 +17,13 @@ const preview: Preview = {
         },
     },
 
-    tags: ["autodocs"]
+    tags: ["autodocs"],
+
+    initialGlobals: {
+        backgrounds: {
+            value: 'light'
+        }
+    }
 };
 
 export default preview;

@@ -1,5 +1,5 @@
-import { withActions } from '@storybook/addon-actions/decorator';
-import type { Meta, StoryObj } from '@storybook/react';
+import { withActions } from 'storybook/actions/decorator';
+import type { Meta, StoryObj } from '@storybook/nextjs';
 import { SocialMediaLinkList } from './SocialMediaLinkList';
 
 const meta: Meta<typeof SocialMediaLinkList> = {

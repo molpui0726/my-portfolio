@@ -1,6 +1,6 @@
-import { withActions } from '@storybook/addon-actions/decorator';
-import type { Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { withActions } from 'storybook/actions/decorator';
+import type { Meta, StoryObj } from '@storybook/nextjs';
+import { expect, userEvent, within } from 'storybook/test';
 import { CommonButton } from './CommonButton';
 
 const meta: Meta<typeof CommonButton> = {
